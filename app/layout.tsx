@@ -1,9 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Newsreader } from 'next/font/google';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 
-const inter = Inter({ subsets: ['latin'] });
+const newsreader = Newsreader({
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  variable: '--font-newsreader',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,8 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider attribute="class">{children}</ThemeProvider>
+      <body
+        className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="pt:10 flex max-w-[1400px] flex-col items-center justify-center gap-20 p-5 md:mx-auto md:gap-56 md:p-5 md:pt-12">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

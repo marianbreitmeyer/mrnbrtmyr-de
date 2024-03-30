@@ -7,7 +7,8 @@ export default function Home() {
       <ThemeSwitch />
 
       <div className="w-12 h-12 absolute bg-teal-400 dark:bg-orange-500 mt-8">
-        Theme Test
+        <p className="dark:block hidden">Dark Theme</p>
+        <p className="dark:hidden block">Light Theme</p>
       </div>
     </main>
   );
