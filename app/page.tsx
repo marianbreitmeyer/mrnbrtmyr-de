@@ -1,9 +1,11 @@
 import ExperienceDescription from '@/components/ExperienceDescription';
 import ExperienceEntry from '@/components/ExperienceEntry';
+import Title from '@/components/Title';
 
 export default function Home() {
   return (
     <main className="w-full">
+      <Title />
       <section className="my-14 text-sm">
         <h1 className="text-2xl font-serif">
           Crafting <i>human-centered</i> software, mobile apps, and web
