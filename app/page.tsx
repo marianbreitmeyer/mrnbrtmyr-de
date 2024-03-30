@@ -1,3 +1,4 @@
+import ExperienceDescription from '@/components/ExperienceDescription';
 import ExperienceEntry from '@/components/ExperienceEntry';
 
 export default function Home() {
@@ -62,6 +63,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <ExperienceDescription />
     </main>
   );
 }
