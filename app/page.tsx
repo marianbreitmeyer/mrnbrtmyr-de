@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="w-full">
       <Title />
-      <section className="my-14 text-sm">
+      <section className="my-14">
         <h1 className="text-2xl font-serif">
           Crafting <i>human-centered</i> software, mobile apps, and web
           experiences for more than a decade.
