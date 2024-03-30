@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
+import ThemeSwitch from '@/components/theme-switch';
 
 const newsreader = Newsreader({
   weight: ['400', '500', '600'],
@@ -35,6 +36,7 @@ export default function RootLayout({
         >
           <div className="pt:10 flex max-w-[1400px] flex-col items-center justify-center gap-20 p-5 md:mx-auto md:gap-56 md:p-5 md:pt-12">
             {children}
+            <ThemeSwitch />
           </div>
         </ThemeProvider>
       </body>
