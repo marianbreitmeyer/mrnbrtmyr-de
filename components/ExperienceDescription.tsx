@@ -85,3 +85,35 @@ const variants = {
     transition: { type: 'spring', duration: 0.35, delay: 0.25 },
   },
 };
+
+const ContentLichtblick = () => {
+  return (
+    <>
+      <p>LichtBlick Content goes here.</p>
+    </>
+  );
+};
+
+const ContentMutabor = () => {
+  return (
+    <>
+      <p>Mutabor Content goes here.</p>
+    </>
+  );
+};
+
+const ContentDeepblue = () => {
+  return (
+    <>
+      <p>Deepblue networks Content goes here.</p>
+    </>
+  );
+};
+
+const ContentConvoy = () => {
+  return (
+    <>
+      <p>Convoy interactive Content goes here.</p>
+    </>
+  );
+};
