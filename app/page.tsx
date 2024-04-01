@@ -7,7 +7,7 @@ export default function Home() {
     <main className="w-full">
       <Title />
       <section className="my-14">
-        <h1 className="text-2xl font-serif">
+        <h1 className="text-2xl font-serif max-w-xl">
           Crafting <i>human-centered</i> software, mobile apps, and web
           experiences for more than a decade.
         </h1>

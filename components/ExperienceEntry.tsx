@@ -1,7 +1,10 @@
+import { ReactNode } from 'react';
+
 type ExperienceEntryProps = {
   employer: EntryProps;
   roles: EntryProps[];
   description?: string;
+  children?: ReactNode;
 };
 
 type EntryProps = {
@@ -13,10 +16,11 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   employer,
   roles,
   description,
+  children,
 }) => {
   return (
-    <div className="flex pb-8 border-b-[1px] last:border-b-0 border-stone-200 dark:border-stone-800">
-      <div className="flex flex-col max-w-[16rem] w-full">
+    <div className="flex flex-col md:flex-row pb-8 border-b-[1px] last:border-b-0 border-stone-200 dark:border-stone-800">
+      <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
         <p className="text-stone-600 dark:text-stone-400 font-semibold">
           {employer.title}
         </p>
@@ -43,6 +47,7 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
         {description && (
           <p className="text-stone-600 dark:text-stone-400">{description}</p>
         )}
+        {children}
       </div>
     </div>
   );

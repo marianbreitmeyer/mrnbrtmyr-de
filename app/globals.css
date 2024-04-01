@@ -7,3 +7,13 @@
     text-wrap: balance;
   }
 }
+
+@layer components {
+  html * {
+    @apply focus-visible:outline-emerald-300 focus-visible:outline-offset-2 focus:outline-emerald-300;
+  }
+  *::selection {
+    @apply bg-emerald-300;
+    @apply text-emerald-900;
+  }
+}
