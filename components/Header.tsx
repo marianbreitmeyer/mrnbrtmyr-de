@@ -4,7 +4,7 @@ import { useState } from 'react';
 import useInterval from '@/hooks/useIntervall';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Title = () => {
+const Header = () => {
   let [role, setRole] = useState(false);
 
   useInterval(() => {
@@ -47,7 +47,7 @@ const Title = () => {
   );
 };
 
-export default Title;
+export default Header;
 
 const variants = {
   exit: {
