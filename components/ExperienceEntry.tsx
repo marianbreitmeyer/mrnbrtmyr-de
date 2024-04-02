@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
+import { Link2Icon } from '@radix-ui/react-icons';
 
 type ExperienceEntryProps = {
   employer: EntryProps;
   roles: EntryProps[];
+  logo: string;
   description?: string;
   children?: ReactNode;
 };
@@ -15,17 +17,19 @@ type EntryProps = {
 const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   employer,
   roles,
+  logo,
   description,
   children,
 }) => {
   return (
     <div className="flex flex-col md:flex-row pb-8 border-b-[1px] last:border-b-0 border-stone-200 dark:border-stone-800">
       <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
-        <p className="text-stone-600 dark:text-stone-400 font-semibold">
-          {employer.title}
-        </p>
-        <div className="mr-8 max-w-[8rem] w-full text-stone-400 dark:text-stone-600">
+        <p className="text-stone-600 dark:text-stone-400 font-mono">
           {employer.date}
+        </p>
+        <div className="group flex items-center gap-x-2 mr-8 max-w-[16rem] w-full hover:cursor-pointer">
+          <p className="text-stone-400 dark:text-stone-600">{employer.title}</p>
+          <LinkEmployer href="/" />
         </div>
       </div>
       <div className="flex flex-col gap-y-4">
@@ -36,7 +40,7 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
                 {entry.title}
               </p>
               {entry.date && (
-                <div className="mr-8 max-w-[8rem] w-full text-stone-400 dark:text-stone-600 text-sm">
+                <div className="text-stone-400 dark:text-stone-600 font-mono">
                   {entry.date}
                 </div>
               )}
@@ -54,3 +58,13 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
 };
 
 export default ExperienceEntry;
+
+const LinkEmployer = ({ href }: { href: string }) => {
+  return (
+    <div className="h-6 w-6 flex items-center justify-around">
+      <div className="transition-all duration-150 ease-in-out p-1 group-hover:p-1.5 hover:ring-stone-400 hover:dark:ring-stone-600 ring-1 ring-stone-200 dark:ring-stone-800 rounded-full text-stone-400 dark:text-stone-600 flex items-center justify-around">
+        <Link2Icon className="h-3 w-3" />
+      </div>
+    </div>
+  );
+};

@@ -13,7 +13,9 @@ export default function Home() {
         </h1>
       </section>
       <section className="my-14 text-sm">
-        <h3 className="mb-6 font-semibold">Experience</h3>
+        <h3 className="mb-6 font-semibold text-stone-400 dark:text-stone-600">
+          Experience
+        </h3>
         <div className="flex flex-col gap-y-10">
           <ExperienceEntry
             employer={{ date: '2020 – Present', title: 'LichtBlick SE' }}
@@ -27,6 +29,7 @@ export default function Home() {
                 title: 'Senior UI Designer',
               },
             ]}
+            logo="lichtblick"
             description="Did a lot of shit."
           />
           <ExperienceEntry
@@ -37,6 +40,7 @@ export default function Home() {
                 title: 'Senior Art Director Digital / Digital Product Designer',
               },
             ]}
+            logo="mutabor"
             description="Did a lot more shit. Lorem ipsum dolor sit amet consecteuer und DesignOps."
           />
           <ExperienceEntry
@@ -51,6 +55,7 @@ export default function Home() {
                 title: 'Art Director Digital / Interaction Designer',
               },
             ]}
+            logo="dbn"
             description="Learned the basics."
           />
           <ExperienceEntry
@@ -61,6 +66,7 @@ export default function Home() {
                 title: 'Design Engineer',
               },
             ]}
+            logo="convoy"
             description="Learned the basics."
           />
         </div>
