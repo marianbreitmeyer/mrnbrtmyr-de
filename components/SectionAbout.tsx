@@ -1,9 +1,9 @@
+import Section from '@/components/Section';
+
 const SectionAbout = () => (
-  <section className="my-14 text-sm">
-    <h3 className="mb-6 font-semibold text-stone-400 dark:text-stone-600">
-      About
-    </h3>
-  </section>
+  <Section title="About">
+    <p>More Content goes here.</p>
+  </Section>
 );
 
 export default SectionAbout;

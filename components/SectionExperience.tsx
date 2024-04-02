@@ -1,10 +1,8 @@
 import ExperienceEntry from '@/components/ExperienceEntry';
+import Section from '@/components/Section';
 
 const SectionExperience = () => (
-  <section className="my-14 text-sm">
-    <h3 className="mb-6 font-semibold text-stone-400 dark:text-stone-600">
-      Experience
-    </h3>
+  <Section title="Experience">
     <div className="flex flex-col gap-y-10">
       <ExperienceEntry
         employer={{ date: '2020 – Present', title: 'LichtBlick SE' }}
@@ -59,7 +57,7 @@ const SectionExperience = () => (
         description="Learned the basics."
       />
     </div>
-  </section>
+  </Section>
 );
 
 export default SectionExperience;
