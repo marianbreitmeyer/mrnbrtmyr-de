@@ -1,10 +1,10 @@
-import ExperienceEntry from '@/components/ExperienceEntry';
+import Milestone from '@/components/Milestone';
 import Section from '@/components/Section';
 
 const SectionExperience = () => (
   <Section title="Experience">
     <div className="flex flex-col gap-y-10">
-      <ExperienceEntry
+      <Milestone
         employer={{ date: '2020 – Present', title: 'LichtBlick SE' }}
         roles={[
           {
@@ -19,7 +19,7 @@ const SectionExperience = () => (
         logo="lichtblick"
         description="Did a lot of shit."
       />
-      <ExperienceEntry
+      <Milestone
         employer={{ date: '2018 – 2020', title: 'Mutabor' }}
         roles={[
           {
@@ -30,7 +30,7 @@ const SectionExperience = () => (
         logo="mutabor"
         description="Did a lot more shit. Lorem ipsum dolor sit amet consecteuer und DesignOps."
       />
-      <ExperienceEntry
+      <Milestone
         employer={{ date: '2016 – 2018', title: 'deepblue networks' }}
         roles={[
           {
@@ -45,7 +45,7 @@ const SectionExperience = () => (
         logo="dbn"
         description="Learned the basics."
       />
-      <ExperienceEntry
+      <Milestone
         employer={{ date: '2016 – 2017', title: 'convoy interactive' }}
         roles={[
           {

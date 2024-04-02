@@ -1,20 +1,20 @@
 import { ReactNode } from 'react';
 import { Link2Icon } from '@radix-ui/react-icons';
 
-type ExperienceEntryProps = {
-  employer: EntryProps;
-  roles: EntryProps[];
+type MilestoneEnhancedProps = {
+  employer: MilestoneProps;
+  roles: MilestoneProps[];
   logo: string;
   description?: string;
   children?: ReactNode;
 };
 
-type EntryProps = {
+type MilestoneProps = {
   date?: string;
   title: string;
 };
 
-const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
+const Milestone: React.FC<MilestoneEnhancedProps> = ({
   employer,
   roles,
   logo,
@@ -57,7 +57,7 @@ const ExperienceEntry: React.FC<ExperienceEntryProps> = ({
   );
 };
 
-export default ExperienceEntry;
+export default Milestone;
 
 const LinkEmployer = ({ href }: { href: string }) => {
   return (
