@@ -17,7 +17,6 @@ const ThemeSwitch = () => {
     } else {
       setTheme('dark');
     }
-    console.log('theme', theme);
   }, []);
 
   if (!mounted) {
