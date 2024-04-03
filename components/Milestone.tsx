@@ -2,9 +2,8 @@ import { ReactNode } from 'react';
 import { Link2Icon } from '@radix-ui/react-icons';
 
 type MilestoneEnhancedProps = {
-  employer: MilestoneProps;
+  employer?: MilestoneProps;
   roles: MilestoneProps[];
-  logo: string;
   description?: string;
   children?: ReactNode;
 };
@@ -17,20 +16,25 @@ type MilestoneProps = {
 const Milestone: React.FC<MilestoneEnhancedProps> = ({
   employer,
   roles,
-  logo,
   description,
   children,
 }) => {
   return (
     <div className="flex flex-col md:flex-row pb-8 border-b-[1px] last:border-b-0 border-stone-200 dark:border-stone-800">
       <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
-        <p className="text-stone-600 dark:text-stone-400 font-mono">
-          {employer.date}
-        </p>
-        <div className="group flex items-center gap-x-2 mr-8 max-w-[16rem] w-full hover:cursor-pointer">
-          <p className="text-stone-400 dark:text-stone-600">{employer.title}</p>
-          <LinkEmployer href="/" />
-        </div>
+        {employer && employer.date && (
+          <p className="text-stone-600 dark:text-stone-400 font-mono">
+            {employer.date}
+          </p>
+        )}
+        {employer && employer.title && (
+          <div className="group flex items-center gap-x-2 mr-8 max-w-[16rem] w-full hover:cursor-pointer">
+            <p className="text-stone-400 dark:text-stone-600">
+              {employer.title}
+            </p>
+            <LinkEmployer href="/" />
+          </div>
+        )}
       </div>
       <div className="flex flex-col gap-y-4">
         {roles.map((entry, index) => {
