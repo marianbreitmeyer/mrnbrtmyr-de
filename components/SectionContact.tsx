@@ -27,6 +27,14 @@ const SectionContact = () => (
         },
       ]}
     />
+    <Milestone
+      employer={{ date: 'GitHub', title: '' }}
+      roles={[
+        {
+          title: 'marianbreitmeyer',
+        },
+      ]}
+    />
   </Section>
 );
 
