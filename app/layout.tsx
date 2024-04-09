@@ -26,22 +26,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans`}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+        <body
+          className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans bg-stone-100 dark:bg-stone-900`}
         >
-          <div className="pt:10 flex max-w-4xl flex-col items-center justify-center gap-20 p-5 md:mx-auto md:gap-56 md:p-5 md:pt-12">
+          <div className="flex flex-col max-w-4xl items-center justify-center gap-24 md:mx-auto md:gap-64 p-5 pt:8 md:pt-12">
             {children}
             <ThemeSwitch />
             <Footer />
           </div>
-        </ThemeProvider>
-      </body>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

@@ -7,7 +7,7 @@ type VStackProps = {
 };
 
 const VStack: React.FC<VStackProps> = ({ children, styling }) => {
-  return <div className={cn('fixed styling', styling)}>{children}</div>;
+  return <div className={cn('flex flex-col', styling)}>{children}</div>;
 };
 
 export default VStackProps;
