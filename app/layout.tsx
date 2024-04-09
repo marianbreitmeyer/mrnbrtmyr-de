@@ -4,7 +4,6 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
-import ThemeSwitch from '@/components/theme-switch';
 import Footer from '@/components/Footer';
 
 const newsreader = Newsreader({
@@ -35,9 +34,8 @@ export default function RootLayout({
         <body
           className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans bg-stone-100 dark:bg-stone-900`}
         >
-          <div className="flex flex-col max-w-2xl items-center justify-center gap-24 md:mx-auto md:gap-64 p-5 pt:8 md:pt-12">
+          <div className="max-w-2xl md:mx-auto p-5 pt:8 md:pt-12">
             {children}
-            <ThemeSwitch />
             <Footer />
           </div>
         </body>

@@ -12,7 +12,7 @@ const Header = () => {
   }, 5000);
 
   return (
-    <>
+    <header>
       <h3 className="text-base text-stone-800 dark:text-stone-200">
         Marian Breitmeyer
       </h3>
@@ -43,7 +43,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </p>
-    </>
+    </header>
   );
 };
 

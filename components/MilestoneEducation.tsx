@@ -21,7 +21,7 @@ const MilestoneEducation: React.FC<MilestoneEnhancedProps> = ({
   return (
     <div className="flex flex-col md:flex-row pb-8 border-subtle">
       {date && (
-        <p className="md:max-w-[16rem] w-full mb-4 md:mb-0 text-sublte font-mono">
+        <p className="md:max-w-[16rem] w-full mb-4 md:mb-0 text-moderate font-mono">
           {date}
         </p>
       )}

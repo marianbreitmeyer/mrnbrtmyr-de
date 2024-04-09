@@ -1,40 +1,20 @@
 import Section from '@/components/Section';
-import Milestone from '@/components/MilestoneExperience';
+import Contact from './Contact';
 
 const SectionContact = () => (
   <Section title="Contact">
-    <Milestone
-      employer={{ date: 'Twitter', title: '' }}
-      roles={[
-        {
-          title: '@marianbreitmeyer',
-        },
-      ]}
+    <Contact title="Twitter" handle="@m_breitmeyer" href="https://test.test" />
+    <Contact
+      title="LinkedIn"
+      handle="@marianbreitmeyer"
+      href="https://test.test"
     />
-    <Milestone
-      employer={{ date: 'LinkedIn', title: '' }}
-      roles={[
-        {
-          title: 'marianbreitmeyer',
-        },
-      ]}
+    <Contact
+      title="E-Mail"
+      handle="info@marianbreitmeyer.de"
+      href="https://test.test"
     />
-    <Milestone
-      employer={{ date: 'E-Mail', title: '' }}
-      roles={[
-        {
-          title: 'info@marianbreitmeyer.de',
-        },
-      ]}
-    />
-    <Milestone
-      employer={{ date: 'GitHub', title: '' }}
-      roles={[
-        {
-          title: 'marianbreitmeyer',
-        },
-      ]}
-    />
+    <Contact title="GitHub" handle="@mbreitmeyer" href="https://test.test" />
   </Section>
 );
 

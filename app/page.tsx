@@ -8,7 +8,7 @@ import MyAvatar from '@/components/MyAvatar';
 
 export default function Home() {
   return (
-    <main className="w-full">
+    <main className="w-full flex flex-col gap-8 md:gap-16">
       <Header />
       <MyAvatar />
       <SectionIntro />

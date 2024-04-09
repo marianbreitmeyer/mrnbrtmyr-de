@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Link2Icon } from '@radix-ui/react-icons';
+import Modal from '@/components/Modal';
 
 type MilestoneEnhancedProps = {
   employer?: MilestoneProps;
@@ -23,7 +24,7 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
     <div className="flex flex-col md:flex-row pb-8 border-subtle">
       <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
         {employer && employer.date && (
-          <p className="text-sublte font-mono">{employer.date}</p>
+          <p className="text-moderate font-mono">{employer.date}</p>
         )}
         {employer && employer.title && (
           <div className="group flex items-center gap-x-2 hover:cursor-pointer">
@@ -43,7 +44,7 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
             </div>
           );
         })}
-
+        <Modal />
         {description && <p className="text-moderate">{description}</p>}
         {children}
       </div>
