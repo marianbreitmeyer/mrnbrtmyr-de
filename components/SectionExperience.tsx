@@ -1,4 +1,4 @@
-import Milestone from '@/components/Milestone';
+import Milestone from '@/components/MilestoneExperience';
 import Section from '@/components/Section';
 
 const SectionExperience = () => (

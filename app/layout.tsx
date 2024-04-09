@@ -35,7 +35,7 @@ export default function RootLayout({
         <body
           className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans bg-stone-100 dark:bg-stone-900`}
         >
-          <div className="flex flex-col max-w-4xl items-center justify-center gap-24 md:mx-auto md:gap-64 p-5 pt:8 md:pt-12">
+          <div className="flex flex-col max-w-2xl items-center justify-center gap-24 md:mx-auto md:gap-64 p-5 pt:8 md:pt-12">
             {children}
             <ThemeSwitch />
             <Footer />

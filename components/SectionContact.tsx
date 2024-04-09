@@ -1,5 +1,5 @@
 import Section from '@/components/Section';
-import Milestone from '@/components/Milestone';
+import Milestone from '@/components/MilestoneExperience';
 
 const SectionContact = () => (
   <Section title="Contact">
