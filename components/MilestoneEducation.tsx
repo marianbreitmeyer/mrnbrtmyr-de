@@ -19,7 +19,7 @@ const MilestoneEducation: React.FC<MilestoneEnhancedProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row pb-8 border-subtle relative">
+    <div className="flex flex-col md:flex-row pb-8 border-b-subtle relative">
       {date && (
         <p className="md:max-w-[16rem] w-full mb-4 md:mb-0 text-moderate font-mono">
           {date}

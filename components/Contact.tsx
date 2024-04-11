@@ -6,7 +6,7 @@ type ContactProps = {
 
 const Contact: React.FC<ContactProps> = ({ title, handle, href }) => {
   return (
-    <div className="flex flex-col md:flex-row pb-8 border-subtle relative">
+    <div className="flex flex-col md:flex-row pb-8 border-b-subtle relative">
       <p className="md:max-w-[16rem] w-full mb-4 md:mb-0 text-subtle">
         {title}
       </p>

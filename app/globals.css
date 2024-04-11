@@ -10,11 +10,11 @@
 
 @layer components {
   html * {
-    @apply focus-visible:outline-emerald-300 focus-visible:outline-offset-2 focus:outline-emerald-300;
+    @apply focus-visible:outline-teal-300 focus-visible:outline-offset-2 focus:outline-teal-300;
   }
   *::selection {
-    @apply bg-emerald-300;
-    @apply text-emerald-900;
+    @apply bg-teal-300;
+    @apply text-teal-900;
   }
   .text-subtle {
     @apply text-stone-400 dark:text-stone-600;
@@ -25,10 +25,19 @@
   .text-strong {
     @apply text-stone-900 dark:text-stone-100;
   }
-  .border-subtle {
+  .border-b-subtle {
     @apply border-b-[1px] last:border-b-0 border-stone-200 dark:border-stone-800;
+  }
+  .border-t-subtle {
+    @apply border-t-[1px] last:border-t-0 border-stone-200 dark:border-stone-800;
+  }
+  .border-l-subtle {
+    @apply border-l-[1px] last:border-l-0 border-stone-200 dark:border-stone-800;
   }
   .bg-gradient-subtle {
     @apply bg-gradient-to-t from-stone-200/15 to-stone-200/0 dark:from-stone-800/15 dark:to-stone-800/0;
+  }
+  .wrapper {
+    @apply relative w-full max-w-2xl md:mx-auto p-5 pt-8 md:pt-12 border-b-2 border-stone-600;
   }
 }

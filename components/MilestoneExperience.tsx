@@ -21,7 +21,7 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row pb-8 border-subtle relative">
+    <div className="flex flex-col md:flex-row pb-8 border-b-subtle relative">
       <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
         {employer && employer.date && (
           <p className="text-moderate font-mono">{employer.date}</p>

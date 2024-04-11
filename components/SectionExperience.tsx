@@ -2,7 +2,7 @@ import Milestone from '@/components/MilestoneExperience';
 import Section from '@/components/Section';
 
 const SectionExperience = () => (
-  <Section title="Experience">
+  <Section title="Work Experience">
     <Milestone
       employer={{ date: '2020 – Present', title: 'LichtBlick SE' }}
       roles={[
