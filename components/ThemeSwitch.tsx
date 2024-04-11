@@ -24,8 +24,6 @@ const ThemeSwitch = () => {
   }
 
   return (
-    // How to sync the toggle with system pref?
-    // Styling for a more stylish toggle -> className="ring-1 ring-stone-400/25 rounded-md p-2 flex items-center justify-center"
     <>
       <Toggle.Root
         aria-label="Toggle DarkMode"

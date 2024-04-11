@@ -12,6 +12,7 @@ const newsreader = Newsreader({
   subsets: ['latin'],
   variable: '--font-newsreader',
 });
+// Caveat as Handwriting
 
 export const metadata: Metadata = {
   title: 'Create Next App',
