@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 
 const useInterval = (callback: () => void, delay: number) => {
   const savedCallback = useRef<() => void>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     savedCallback.current = callback;
@@ -14,14 +15,17 @@ const useInterval = (callback: () => void, delay: number) => {
       }
     };
 
-    let id: NodeJS.Timeout;
-
     const onFocus = () => {
-      id = setInterval(handler, delay);
+      if (!intervalRef.current) {
+        intervalRef.current = setInterval(handler, delay);
+      }
     };
 
     const onBlur = () => {
-      clearInterval(id);
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
     };
 
     onFocus();
@@ -30,7 +34,10 @@ const useInterval = (callback: () => void, delay: number) => {
     window.addEventListener('blur', onBlur);
 
     return () => {
-      clearInterval(id);
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
       window.removeEventListener('focus', onFocus);
       window.removeEventListener('blur', onBlur);
     };
