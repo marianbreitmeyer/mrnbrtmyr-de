@@ -13,7 +13,7 @@ const Header = () => {
   }, 5000);
 
   return (
-    <header>
+    <header className="wrapper">
       <MyAvatar className="mb-4" />
       <h3 className="text-base text-stone-800 dark:text-stone-200">
         Marian Breitmeyer

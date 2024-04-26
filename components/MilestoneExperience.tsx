@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { Link2Icon } from '@radix-ui/react-icons';
-import Modal from '@/components/Modal';
 
 type MilestoneEnhancedProps = {
   employer?: MilestoneProps;
@@ -44,7 +43,6 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
             </div>
           );
         })}
-        {/* <Modal /> */}
         {description && <p className="text-moderate">{description}</p>}
         {children}
       </div>
