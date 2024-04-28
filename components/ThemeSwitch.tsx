@@ -28,7 +28,7 @@ const ThemeSwitch = () => {
       <Toggle.Root
         aria-label="Toggle DarkMode"
         // className="group hover:bg-violet3 color-mauve11 data-[state=on]:bg-violet6 data-[state=on]:text-violet12 shadow-blackA4 flex h-[35px] w-[35px] items-center justify-center rounded bg-white text-base leading-4 shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black text-black"
-        className="transition-all duration-150 ease-in-out p-4 group-hover:scale-[120%] hover:ring-stone-400 hover:dark:ring-stone-600 ring-1 ring-stone-200 dark:ring-stone-800 rounded-md text-stone-400 dark:text-stone-600 flex items-center justify-around"
+        className="transition-all duration-150 ease-in-out p-4 hover:ring-white/100 ring-1 ring-white/40 rounded-md text-white flex items-center justify-around"
         onPressedChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       >
         <AnimatePresence>

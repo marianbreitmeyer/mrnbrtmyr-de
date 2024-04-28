@@ -41,7 +41,7 @@ const SectionExperience = () => (
       description="Learned the basics."
     />
     <Milestone
-      employer={{ date: '2016 – 2017', title: 'convoy interactive' }}
+      employer={{ date: '2015 – 2016', title: 'convoy interactive' }}
       roles={[
         {
           title: 'Design Engineer',

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Newsreader } from 'next/font/google';
+import { Newsreader, Pixelify_Sans, Silkscreen, VT323 } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
@@ -36,6 +36,7 @@ export default function RootLayout({
           className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} font-sans bg-stone-100 dark:bg-stone-900`}
         >
           {children}
+
           <Footer />
         </body>
       </ThemeProvider>

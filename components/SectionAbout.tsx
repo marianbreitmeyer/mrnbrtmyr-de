@@ -1,8 +1,8 @@
 import Section from '@/components/Section';
 
 const SectionAbout = () => (
-  <Section title="About">
-    <p className="text-moderate leading-8">
+  <Section title="About" bottomLine={true}>
+    <p className="text-moderate leading-8 h-padding">
       Family man, wanne-be gravel-biker, part-time developer, and passionate
       designer. Designing systems and reducing complexity to make it manageable,
       that fascinates me. In the past, this meant designing typography and grid

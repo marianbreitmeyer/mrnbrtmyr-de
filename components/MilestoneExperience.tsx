@@ -20,7 +20,7 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
   children,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row pb-8 border-b-subtle relative">
+    <div className="flex flex-col md:flex-row pb-8 relative h-padding">
       <div className="flex flex-col md:max-w-[16rem] w-full mb-4 md:mb-0">
         {employer && employer.date && (
           <p className="text-moderate font-mono">{employer.date}</p>
@@ -46,7 +46,10 @@ const MilestoneExperience: React.FC<MilestoneEnhancedProps> = ({
         {description && <p className="text-moderate">{description}</p>}
         {children}
       </div>
-      <div className="bg-gradient-subtle w-full h-full min-h-full m-auto absolute -z-10"></div>
+      {/* <div className="bg-gradient-subtle w-full h-full min-h-full m-auto absolute -z-10"></div> */}
+      <div className="absolute left-0 bottom-0 z-20 h-px w-full  bg-gradient-to-t from-transparent via-stone-200 dark:via-stone-800"></div>
+      <div className="absolute -left-0.5 -bottom-0.5 z-30 h-1 w-1 bg-stone-400 dark:bg-stone-600 rounded-full"></div>
+      <div className="absolute -right-0.5 -bottom-0.5 z-30 h-1 w-1 bg-stone-400 dark:bg-stone-600 rounded-full"></div>
     </div>
   );
 };

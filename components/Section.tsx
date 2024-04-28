@@ -1,19 +1,23 @@
 import { ReactNode } from 'react';
 import VisualGrid from '@/components/VisualGrid';
+import Word from '@/components/Word';
 
 const Section = ({
   title,
   children,
+  bottomLine,
 }: {
   title: string;
   children: ReactNode;
+  bottomLine?: boolean;
 }) => (
-  <section className="my-12 text-sm flex flex-col gap-y-10 wrapper">
-    <h3 className="relative font-semibold text-stone-400 dark:text-stone-600 before:absolute before:h-full before:bg-gradient-to-r before:to-transparent before:from-stone-200 before:dark:from-stone-800 before:w-4 before:md:w-8 before:-left-12 md:before:-left-16">
+  <section className="text-sm flex flex-col gap-y-10 wrapper">
+    <h3 className="relative font-semibold text-stone-400 dark:text-stone-600 before:absolute before:h-full before:bg-gradient-to-r before:to-transparent before:from-stone-200 before:dark:from-stone-800 before:w-8 before:md:w-16 before:left-0 px-20 md:px-24">
       {title}
     </h3>
     {children}
-    <VisualGrid />
+    <Word content={title} />
+    <VisualGrid bottomLine={bottomLine} />
   </section>
 );
 
