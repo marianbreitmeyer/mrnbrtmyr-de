@@ -10,14 +10,12 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="w-full flex flex-col gap-2 md:gap-4">
+      <main className="w-full flex flex-col">
         <SectionIntro />
-        <SectionHeader title="Testify." subtitle="I need more." />
-
         <SectionExperience />
-        <SectionEducation />
-        <SectionContact />
-        <SectionAbout />
+        {/* <SectionEducation /> */}
+        {/* <SectionContact /> */}
+        {/* <SectionAbout /> */}
       </main>
     </>
   );

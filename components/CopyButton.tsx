@@ -3,9 +3,12 @@ import Action from '@/components/Action';
 import * as Toast from '@radix-ui/react-toast';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import Icon from '@/components/Icon';
 
 const CopyButton = () => {
-  let [toasts, setToasts] = useState<{ id: string; message: string }[]>([]);
+  let [toasts, setToasts] = useState<
+    { id: string; message: string; success: boolean }[]
+  >([]);
 
   const copyToClipboard = async ({
     textToCopy,
@@ -21,6 +24,7 @@ const CopyButton = () => {
         {
           id: window.crypto.randomUUID(),
           message: toastMessage,
+          success: true,
         },
       ]);
     } catch (error) {
@@ -29,6 +33,7 @@ const CopyButton = () => {
         {
           id: window.crypto.randomUUID(),
           message: 'Failed to copy.',
+          success: false,
         },
       ]);
     }
@@ -60,7 +65,7 @@ const CopyButton = () => {
               forceMount
             >
               <motion.li
-                className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium"
+                className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium flex gap-x-2 items-center"
                 initial={{ y: 40, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{
@@ -73,7 +78,11 @@ const CopyButton = () => {
               >
                 <Toast.Title />
                 <Toast.Description>{toast.message}</Toast.Description>
-                {/* <Icon variant={'success'} /> */}
+                {toast.success ? (
+                  <Icon variant="success" />
+                ) : (
+                  <Icon variant="error" />
+                )}
               </motion.li>
             </Toast.Root>
           ))}

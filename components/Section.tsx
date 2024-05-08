@@ -1,15 +1,11 @@
 import { ReactNode } from 'react';
-import VisualGrid from '@/components/VisualGrid';
-import Word from '@/components/Word';
 
 const Section = ({
   title,
   children,
-  bottomLine,
 }: {
   title: string;
   children: ReactNode;
-  bottomLine?: boolean;
 }) => (
   <section className="w-full h-auto bg-stone-200/20">
     <div className="text-sm flex flex-col gap-y-10 wrapper">
@@ -17,7 +13,6 @@ const Section = ({
         {title}
       </h3>
       {children}
-      <Word content={title} />
     </div>
   </section>
 );

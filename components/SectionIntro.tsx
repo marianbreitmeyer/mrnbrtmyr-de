@@ -9,7 +9,7 @@ const SectionIntro = () => (
           Crafting human-centered digital solutions for over a decade. Dedicated
           to simplifying complexity and designing intuitive systems.
         </h1>
-        <h2 className="text-lg text-stone-600 dark:text-stone-400">
+        <h2 className="text-lg text-stone-600 dark:text-stone-400 leading-normal">
           Even though I consider myself a designer, I have found code to be the
           best tool for translating my ideas into reality. I excel at bridging
           the gap between design and development, ensuring the creation of

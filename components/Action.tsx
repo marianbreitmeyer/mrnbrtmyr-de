@@ -24,7 +24,6 @@ type ActionProps = BaseProps &
   );
 
 const Action = ({ className, ...props }: ActionProps) => {
-  console.log('icon? :', props.icon);
   const allClassNames = cn(
     'flex items-center gap-x-1.5 text-stone-600 dark:text-stone-400 text-sm',
     className
@@ -42,7 +41,7 @@ const Action = ({ className, ...props }: ActionProps) => {
   if (props.as === 'external') {
     const { as, ...rest } = props;
     return (
-      <a className={allClassNames} {...rest}>
+      <a className={allClassNames} {...rest} target="_blank">
         {rest.children}
         {props.icon && <Icon variant={props.icon.variant} />}
       </a>
