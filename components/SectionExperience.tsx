@@ -5,15 +5,15 @@ import JobHeader from './JobHeader';
 const SectionExperience = () => (
   <section className="w-full h-auto" id="experience">
     <SectionHeader title="Work Experience." subtitle="What I've done so far." />
-    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-600 py-6 md:py-10 px-6 md:px-10 grid grid-cols-8">
-      <div className="col-span-3 gap-y-6 md:gap-y-10 flex- flex-col p-6 md:p-10 min-h-full">
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-6 md:py-10 grid grid-cols-8">
+      <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader
           date={'2020 – Present'}
           employer="LichtBlick SE"
           href="https://www.lichtblick.de"
         />
       </div>
-      <div className="col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
+      <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
         <TextBlock
           copy={`LichtBlick SE is the largest independent green energy supplier in Germany, renowned for its commitment to sustainable practices. The company specializes in offering eco-friendly electricity, solar, and gas solutions to a diverse range of private and corporate customers. They also offer a range of digital touchpoints, such as e-commerce websites, web customer portals, customer mobile apps, an app for solar installers, and more.
           

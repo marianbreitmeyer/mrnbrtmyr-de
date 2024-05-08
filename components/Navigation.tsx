@@ -1,7 +1,8 @@
+import { cn } from '@/utils/cn';
 import Link from 'next/link';
 
-const Navigation = () => (
-  <nav className="text-sm text-stone-600 dark:text-stone-400">
+const Navigation = ({ className }: { className: string }) => (
+  <nav className={cn('text-sm text-stone-600 dark:text-stone-400', className)}>
     <ul className="flex flex-row gap-x-3 md:gap-x-6">
       <li>
         <Link

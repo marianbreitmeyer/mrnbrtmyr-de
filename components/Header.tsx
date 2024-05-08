@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation';
 
 const Header = () => {
   return (
-    <header className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-600 py-20 md:py-24 px-6 md:px-10 flex flex-row items-center justify-between">
+    <header className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-12 md:py-24 px-6 md:px-10 flex flex-col gap-y-6 md:flex-row md:items-center justify-between z-10">
       <div className="flex flex-row gap-x-3">
         <MyAvatar />
         <div className="flex flex-col">
@@ -17,7 +17,7 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <Navigation />
+      <Navigation className={'hidden md:flex'} />
     </header>
   );
 };
