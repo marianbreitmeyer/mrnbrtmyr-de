@@ -1,3 +1,6 @@
+import Action from '@/components/Action';
+import CopyButton from '@/components/CopyButton';
+
 const SectionIntro = () => (
   <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-600">
     <div className="grid grid-cols-8 wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-600 py-20 md:py-24 px-6 md:px-10">
@@ -13,6 +16,23 @@ const SectionIntro = () => (
           delightful and ethical solutions to provide value to both users and
           businesses.
         </h2>
+        <div className="flex flex-row gap-x-3 md:gap-x-6">
+          <Action
+            as="external"
+            href={'https://google.de'}
+            icon={{ variant: 'arrow-right-top' }}
+          >
+            LinkedIn
+          </Action>
+          <Action
+            as="external"
+            href={'https://google.de'}
+            icon={{ variant: 'arrow-right-top' }}
+          >
+            CV
+          </Action>
+          <CopyButton />
+        </div>
       </div>
     </div>
   </section>
