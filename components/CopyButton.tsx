@@ -1,40 +1,84 @@
 'use client';
 import Action from '@/components/Action';
 import * as Toast from '@radix-ui/react-toast';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
 const CopyButton = () => {
   let [toasts, setToasts] = useState<{ id: string; message: string }[]>([]);
+
+  const copyToClipboard = async ({
+    textToCopy,
+    toastMessage,
+  }: {
+    textToCopy: string;
+    toastMessage: string;
+  }) => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setToasts([
+        ...toasts,
+        {
+          id: window.crypto.randomUUID(),
+          message: toastMessage,
+        },
+      ]);
+    } catch (error) {
+      setToasts([
+        ...toasts,
+        {
+          id: window.crypto.randomUUID(),
+          message: 'Failed to copy.',
+        },
+      ]);
+    }
+  };
 
   return (
     <>
       <Action
         as="button"
         onClick={() =>
-          setToasts([
-            ...toasts,
-            { id: window.crypto.randomUUID(), message: 'All set and done!' },
-          ])
+          copyToClipboard({
+            textToCopy: 'hi@marianbreitmeyer.de',
+            toastMessage: 'E-Mail copied to clipboard.',
+          })
         }
         icon={{ variant: 'clipboard' }}
       >{`hi@marianbreitmeyer.de`}</Action>
 
       <Toast.Provider>
-        {toasts.map((toast) => (
-          <Toast.Root
-            key={toast.id}
-            duration={3000}
-            className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium"
-            asChild
-          >
-            <li>
-              <Toast.Title />
-              <Toast.Description>{toast.message}</Toast.Description>
-              <Toast.Close>X</Toast.Close>
-            </li>
-          </Toast.Root>
-        ))}
-        <Toast.Viewport className="fixed bottom-4 right-4 flex flex-col-reverse gap-y-4" />
+        <AnimatePresence mode="popLayout">
+          {toasts.map((toast) => (
+            <Toast.Root
+              key={toast.id}
+              duration={5000}
+              onOpenChange={() => {
+                setToasts(toasts.filter((t) => t.id !== toast.id));
+              }}
+              asChild
+              forceMount
+            >
+              <motion.li
+                className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium"
+                initial={{ y: 40, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{
+                  opacity: 0,
+                  zIndex: -1,
+                  transition: { duration: 0.2 },
+                }}
+                transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
+                layout
+              >
+                <Toast.Title />
+                <Toast.Description>{toast.message}</Toast.Description>
+                {/* <Icon variant={'success'} /> */}
+              </motion.li>
+            </Toast.Root>
+          ))}
+        </AnimatePresence>
+        <Toast.Viewport className="fixed bottom-4 md:bottom-8 right-4 md:right-8 flex flex-col gap-y-2 z-50" />
       </Toast.Provider>
     </>
   );

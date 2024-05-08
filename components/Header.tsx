@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex flex-col">
           <h3 className="text-base text-stone-800 dark:text-stone-200 relative">
             Marian Breitmeyer
-            <StatusPill className="absolute top-0 -translate-y-2/4 -right-1 translate-x-full" />
+            <StatusPill className="absolute top-0 -translate-y-2/4 right-16 translate-x-full" />
           </h3>
           <p className="text-base text-stone-400 dark:text-stone-400 h-8">
             Product Designer <i>who codes</i>
