@@ -22,7 +22,7 @@ const Word: React.FC<WordProps> = ({
     {' '}
     <p
       className={clsx(
-        'text-[10rem] leading-[10rem] whitespace-nowrap -z-20 font-semibold absolute left-0 w-fit -translate-x-4',
+        'text-[10rem] leading-[10rem] whitespace-nowrap -z-20 font-serif font-semibold absolute left-0 w-fit -translate-x-4',
         themed ? 'text-white dark:text-stone-950' : 'text-white/10',
         bottom ? 'bottom-0 translate-y-8' : 'top-0 -translate-y-6',
         bg &&

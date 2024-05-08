@@ -12,7 +12,7 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-geist-sans)', ...fontFamily.sans],
         mono: ['var(--font-geist-mono)', ...fontFamily.mono],
-        serif: ['var(--font-newsreader)', ...fontFamily.serif],
+        serif: ['var(--font-mondwest)', ...fontFamily.serif],
       },
       keyframes: {
         overlayShow: {

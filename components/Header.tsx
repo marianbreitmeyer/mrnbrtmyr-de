@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import useInterval from '@/hooks/useIntervall';
 import { motion, AnimatePresence } from 'framer-motion';
-import MyAvatar from './MyAvatar';
+import MyAvatar from '@/components/MyAvatar';
+import VisualGrid from '@/components/VisualGrid';
 
 const Header = () => {
   let [role, setRole] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
   }, 5000);
 
   return (
-    <header className="wrapper">
+    <header className="wrapper grid-bg mt-4">
       <MyAvatar className="mb-4" />
       <h3 className="text-base text-stone-800 dark:text-stone-200">
         Marian Breitmeyer
