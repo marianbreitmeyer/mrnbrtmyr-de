@@ -1,11 +1,21 @@
 import SectionHeader from '@/components/SectionHeader';
 import TextBlock from '@/components/TextBlock';
 import JobHeader from './JobHeader';
+import RoleHeader from './RoleHeader';
 
 const SectionExperience = () => (
+  <>
+    <PartLichtblick />
+    <PartMutabor />
+    <PartDeepblue />
+    <PartConvoy />
+  </>
+);
+export default SectionExperience;
+
+const PartLichtblick = () => (
   <section className="w-full h-auto" id="experience">
-    <SectionHeader title="Work Experience." subtitle="What I've done so far." />
-    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-6 md:py-10 grid grid-cols-8">
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader
           date={'2020 – Present'}
@@ -14,6 +24,16 @@ const SectionExperience = () => (
         />
       </div>
       <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
+        <div className="flex flex-col gap-y-1 md:gap-y-2">
+          <RoleHeader
+            date={'since 2022'}
+            role={'Senior Manager Digital Product Design'}
+          />
+          <RoleHeader
+            date={'2020 – 2022'}
+            role={'Senior User Interface Designer'}
+          />
+        </div>
         <TextBlock
           copy={`LichtBlick SE is the largest independent green energy supplier in Germany, renowned for its commitment to sustainable practices. The company specializes in offering eco-friendly electricity, solar, and gas solutions to a diverse range of private and corporate customers. They also offer a range of digital touchpoints, such as e-commerce websites, web customer portals, customer mobile apps, an app for solar installers, and more.
           
@@ -40,4 +60,88 @@ const SectionExperience = () => (
   </section>
 );
 
-export default SectionExperience;
+const PartMutabor = () => (
+  <section
+    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
+    id="experience"
+  >
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
+      <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
+        <JobHeader
+          date={'2018 – 2020'}
+          employer="Mutabor"
+          href="https://www.mutabor.com"
+        />
+      </div>
+      <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
+        <RoleHeader
+          role={'Senior Art Director Digital / Digital Product Designer'}
+        />
+        <TextBlock
+          copy={`Mutabor is Germany's largest independent 360° design agency and brand consultancy, specializing in developing strategies to achieve a brand's target image. They provide services in design, technology, content, and brand development, supporting brands and companies in reaching the next level.
+
+          Being one of the first designers in the new digital unit, I immersed myself in a variety of projects, actively contributing to the team's expansion. I leveraged a diverse skill set, spanning from UX/UI design to website programming and crafting custom tools like Sketch & Figma plugins. Working across diverse sectors including HealthTech, Sports, and Automotive, I collaborated with esteemed clients such as DFL, HealthAG, Migros, BayWa, Merck, VDA, and ADC. These projects varied from initial MVP developments to continuous platform enhancement and the creation of tailored standalone solutions, offering me a rapid accumulation of valuable experience.`}
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const PartDeepblue = () => (
+  <section
+    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
+    id="experience"
+  >
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
+      <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
+        <JobHeader
+          date={'2016 – 2018'}
+          employer="deepblue networks"
+          href="https://www.db-n.com"
+        />
+      </div>
+      <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
+        <div className="flex flex-col gap-y-1 md:gap-y-2">
+          <RoleHeader
+            date={'2017 – 2018'}
+            role={'Senior Art Director Digital / Interaction Designer'}
+          />
+          <RoleHeader
+            date={'2016 – 2017'}
+            role={'Art Director Digital / Interaction Designer'}
+          />
+        </div>
+        <TextBlock
+          copy={`Deepblue networks AG is a leading digital agency based in Germany, offering a wide range of services in digital marketing, branding, and communication. With a focus on innovation and creativity, Deepblue Networks AG helps clients navigate the digital landscape to enhance their online presence and reach their target audiences effectively.
+
+          Throughout my time at deepblue, my main focus was on enhancing my skills in User Experience Design and broadening my knowledge in this domain. This pursuit led me to progress to Senior and Lead roles, where I managed native app projects for clients such as Migros, Ernsting's Family, Bosch, and ADC within integrated cross-functional product teams, overseeing feature development and maintenance tasks.`}
+        />
+      </div>
+    </div>
+  </section>
+);
+
+const PartConvoy = () => (
+  <section
+    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
+    id="experience"
+  >
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
+      <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
+        <JobHeader
+          date={'2015 – 2016'}
+          employer="convoy interactive"
+          href="http://convoyinteractive.com/"
+        />
+      </div>
+      <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
+        <RoleHeader role={'Design Engineer'} />{' '}
+        <TextBlock
+          copy={`Convoy Interactive is a dynamic digital agency known for its expertise in creating engaging and interactive digital experiences. With a strong focus on innovation and user-centric design, Convoy Interactive collaborates with clients to develop cutting-edge solutions that drive engagement and deliver impactful results.
+
+          This marked my initial professional experience in the digital sector. I held a hybrid role as a Design Engineer, which involved designing the user interface and developing the actual implementation for projects whose scope allowed for it. These were mostly corporate sites, custom landing pages, and small web apps. Since then, I have maintained a keen interest in software experimentation, even during phases when it played a lesser role in my job duties.`}
+        />
+      </div>
+    </div>
+  </section>
+);

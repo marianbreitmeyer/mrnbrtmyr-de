@@ -14,7 +14,7 @@ const JobHeader = ({
 }) => (
   <div
     className={cn(
-      'flex flex-row gap-x-2 md:gap-x-4 text-sm leading-relaxed text-stone-600 dark:text-stone-400 sticky top-8',
+      'flex flex-row gap-x-2 md:gap-x-4 text-sm sticky top-8',
       className
     )}
   >

@@ -19,14 +19,14 @@ const SectionIntro = () => (
         <div className="flex flex-row gap-x-3 md:gap-x-6">
           <Action
             as="external"
-            href={'https://google.de'}
+            href={'https://www.linkedin.com/in/marian-breitmeyer-62001b262/'}
             icon={{ variant: 'arrow-right-top' }}
           >
             LinkedIn
           </Action>
           <Action
             as="external"
-            href={'https://google.de'}
+            href={'https://read.cv/marianbreitmeyer'}
             icon={{ variant: 'arrow-right-top' }}
           >
             CV

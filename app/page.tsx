@@ -12,6 +12,10 @@ export default function Home() {
       <Header />
       <main className="w-full flex flex-col">
         <SectionIntro />
+        <SectionHeader
+          title="Work Experience."
+          subtitle="What I've done so far."
+        />
         <SectionExperience />
         {/* <SectionEducation /> */}
         {/* <SectionContact /> */}
