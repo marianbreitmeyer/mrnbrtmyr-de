@@ -25,7 +25,7 @@ type ActionProps = BaseProps &
 
 const Action = ({ className, ...props }: ActionProps) => {
   const allClassNames = cn(
-    'flex items-center gap-x-1.5 text-stone-600 dark:text-stone-400 text-sm',
+    'flex items-center gap-x-1.5 text-stone-600 dark:text-stone-400 text-sm hover:opacity-60 transition-all duration-150 ease-in-out',
     className
   );
 

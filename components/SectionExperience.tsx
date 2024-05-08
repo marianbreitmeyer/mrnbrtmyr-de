@@ -3,9 +3,9 @@ import TextBlock from '@/components/TextBlock';
 import JobHeader from './JobHeader';
 
 const SectionExperience = () => (
-  <section className="w-full h-auto">
+  <section className="w-full h-auto" id="experience">
     <SectionHeader title="Work Experience." subtitle="What I've done so far." />
-    <div className="wrapper-no-p text-lg text-stone-400 border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-600 py-6 md:py-10 px-6 md:px-10 grid grid-cols-8">
+    <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-600 py-6 md:py-10 px-6 md:px-10 grid grid-cols-8">
       <div className="col-span-3 gap-y-6 md:gap-y-10 flex- flex-col p-6 md:p-10 min-h-full">
         <JobHeader
           date={'2020 – Present'}
@@ -16,7 +16,8 @@ const SectionExperience = () => (
       <div className="col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
         <TextBlock
           copy={`LichtBlick SE is the largest independent green energy supplier in Germany, renowned for its commitment to sustainable practices. The company specializes in offering eco-friendly electricity, solar, and gas solutions to a diverse range of private and corporate customers. They also offer a range of digital touchpoints, such as e-commerce websites, web customer portals, customer mobile apps, an app for solar installers, and more.
-I began my journey at LichtBlick as the first internal UI Design hire and swiftly transitioned into a Design Manager role, which remained partially hands-on. My responsibilities spanned from Design Operations to leading design, encompassing a role where I led and mentored the design team at LichtBlick.`}
+          
+          I began my journey at LichtBlick as the first internal UI Design hire and swiftly transitioned into a Design Manager role, which remained partially hands-on. My responsibilities spanned from Design Operations to leading design, encompassing a role where I led and mentored the design team at LichtBlick.`}
         />
         <TextBlock
           title={'Design Operations'}
