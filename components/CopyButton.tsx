@@ -53,11 +53,11 @@ const CopyButton = () => {
       >{`hi@marianbreitmeyer.de`}</Action>
 
       <Toast.Provider>
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="sync">
           {toasts.map((toast) => (
             <Toast.Root
               key={toast.id}
-              duration={5000}
+              duration={3000}
               onOpenChange={() => {
                 setToasts(toasts.filter((t) => t.id !== toast.id));
               }}
@@ -66,12 +66,13 @@ const CopyButton = () => {
             >
               <motion.li
                 className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium flex gap-x-2 items-center"
-                initial={{ y: 40, opacity: 0 }}
+                initial={{ y: 24, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{
+                  y: 8,
                   opacity: 0,
                   zIndex: -1,
-                  transition: { duration: 0.2 },
+                  transition: { duration: 0.25 },
                 }}
                 transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
                 layout
@@ -87,7 +88,7 @@ const CopyButton = () => {
             </Toast.Root>
           ))}
         </AnimatePresence>
-        <Toast.Viewport className="fixed bottom-4 md:bottom-8 right-4 md:right-8 flex flex-col gap-y-2 z-50" />
+        <Toast.Viewport className="fixed bottom-4 md:bottom-8 right-4 md:right-8 flex flex-col gap-y-2 z-50 w-fit" />
       </Toast.Provider>
     </>
   );
