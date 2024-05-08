@@ -7,7 +7,7 @@ const Picture = ({
   imageSrc: string;
   altText: string;
 }) => (
-  <div className="w-full aspect-video relative rounded-lg overflow-hidden">
+  <div className="w-full aspect-video relative rounded-lg overflow-hidden -z-10">
     <Image
       fill
       src={imageSrc}
