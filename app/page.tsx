@@ -11,8 +11,9 @@ export default function Home() {
     <>
       <Header />
       <main className="w-full flex flex-col gap-2 md:gap-4">
-        <SectionHeader title="Testify." subtitle="I need more." />
         <SectionIntro />
+        <SectionHeader title="Testify." subtitle="I need more." />
+
         <SectionExperience />
         <SectionEducation />
         <SectionContact />
