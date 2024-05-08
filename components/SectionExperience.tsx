@@ -1,7 +1,8 @@
-import SectionHeader from '@/components/SectionHeader';
 import TextBlock from '@/components/TextBlock';
-import JobHeader from './JobHeader';
-import RoleHeader from './RoleHeader';
+import JobHeader from '@/components/JobHeader';
+import RoleHeader from '@/components/RoleHeader';
+import LogoStrip from '@/components/LogoStrip';
+import Picture from '@/components/Picture';
 
 const SectionExperience = () => (
   <>
@@ -24,7 +25,7 @@ const PartLichtblick = () => (
         />
       </div>
       <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
-        <div className="flex flex-col gap-y-1 md:gap-y-2">
+        <div className="flex flex-col gap-y-2 md:gap-y-4">
           <RoleHeader
             date={'since 2022'}
             role={'Senior Manager Digital Product Design'}
@@ -46,15 +47,34 @@ const PartLichtblick = () => (
           }
           copy={`I worked on establishing a culture of design excellence and cross-functional collaboration within the organization. This included influencing the organizational structure to facilitate collaboration across product teams. Introducing rituals, meetings, and fostering a community of practice for digital product design. Also Advocacy for human-centered design was a key aspect of my role, which involved promoting User Research & Testing in collaboration with the Customer Insights Team.`}
         />
+        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
+
         <TextBlock
           title={'Laid the foundation for design'}
           copy={`In terms of foundational design framework, I developed guiding principles in partnership with the Product and Agile teams. Playbooks and rules were defined to streamline design processes, and a cohesive toolset, including custom Figma plugins by me, was implemented to support our design system. I also contributed to enhancing the LichtBlick Photon Design System for consistency and scalability.`}
         />
-        <TextBlock
-          title={'User Experience Design'}
-          subtitle={'Hands-on Projects'}
-          copy={`I participated in multiple ramp-up and MVP projects for both B2C and B2B sectors. I jumped into newly formed teams and assisted them in getting set up. Establishing the foundational structure and refining processes and onboarded new design interns, before I gradually faded back into my more overarching role.`}
-        />
+        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
+
+        <div className="flex flex-col gap-y-4 md:gap-y-6">
+          <TextBlock
+            title={'User Experience Design'}
+            subtitle={'Hands-on Projects'}
+            copy={`I participated in multiple ramp-up and MVP projects for both B2C and B2B sectors. I jumped into newly formed teams and assisted them in getting set up. Establishing the foundational structure and refining processes and onboarded new design interns, before I gradually faded back into my more overarching role.`}
+          />
+          <ol className="list-disc text-sm text-stone-600 dark:text-stone-400">
+            <li>Redesigning the power to heat section and funnel</li>
+            <li>Vision Building for the new B2B Customer Portal & ecosystem</li>
+            <li>
+              Conducting Department-spanning discoveries to improve customer
+              support
+            </li>
+            <li>
+              Laying the foundation for our energy as a service ecosystem
+              including the “strom wallet”
+            </li>
+          </ol>
+        </div>
+        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
     </div>
   </section>
@@ -82,6 +102,8 @@ const PartMutabor = () => (
 
           Being one of the first designers in the new digital unit, I immersed myself in a variety of projects, actively contributing to the team's expansion. I leveraged a diverse skill set, spanning from UX/UI design to website programming and crafting custom tools like Sketch & Figma plugins. Working across diverse sectors including HealthTech, Sports, and Automotive, I collaborated with esteemed clients such as DFL, HealthAG, Migros, BayWa, Merck, VDA, and ADC. These projects varied from initial MVP developments to continuous platform enhancement and the creation of tailored standalone solutions, offering me a rapid accumulation of valuable experience.`}
         />
+        <LogoStrip variant="mutabor" />
+        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
     </div>
   </section>
@@ -101,7 +123,7 @@ const PartDeepblue = () => (
         />
       </div>
       <div className="col-span-8 md:col-span-5  gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
-        <div className="flex flex-col gap-y-1 md:gap-y-2">
+        <div className="flex flex-col gap-y-2 md:gap-y-4">
           <RoleHeader
             date={'2017 – 2018'}
             role={'Senior Art Director Digital / Interaction Designer'}
@@ -116,6 +138,8 @@ const PartDeepblue = () => (
 
           Throughout my time at deepblue, my main focus was on enhancing my skills in User Experience Design and broadening my knowledge in this domain. This pursuit led me to progress to Senior and Lead roles, where I managed native app projects for clients such as Migros, Ernsting's Family, Bosch, and ADC within integrated cross-functional product teams, overseeing feature development and maintenance tasks.`}
         />
+        <LogoStrip variant="deepblue" />
+        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
     </div>
   </section>
