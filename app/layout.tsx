@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Familjen_Grotesk } from 'next/font/google';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import './globals.css';
 import { ThemeProvider } from 'next-themes';
 import Footer from '@/components/Footer';
+import BackgroundGrid from '@/components/BackgroundGrid';
+import GradientStrip from '@/components/GradientStrip';
 
 const mondwest = localFont({
   src: [
@@ -22,15 +23,6 @@ const mondwest = localFont({
   ],
   variable: '--font-mondwest',
 });
-
-const newsreader = Familjen_Grotesk({
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  variable: '--font-newsreader',
-});
-
-// Caveat as Handwriting
 
 export const metadata: Metadata = {
   title: 'Marian Breitmeyer',
@@ -56,6 +48,8 @@ export default function RootLayout({
           {children}
 
           <Footer />
+          <GradientStrip />
+          <BackgroundGrid />
         </body>
       </ThemeProvider>
     </html>
