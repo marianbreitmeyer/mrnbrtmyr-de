@@ -5,8 +5,6 @@ export type IconProps = {
 };
 
 const Icon: React.FC<IconProps> = ({ variant }) => {
-  console.log('Variant prop:', variant); // Output the variant prop value
-
   switch (variant) {
     case 'arrow-right-top':
       return (
