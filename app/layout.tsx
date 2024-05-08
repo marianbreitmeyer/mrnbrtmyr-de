@@ -43,7 +43,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <body
-          className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${mondwest.variable} font-sans bg-stone-100 dark:bg-stone-900`}
+          className={`antialiased ${GeistSans.variable} ${GeistMono.variable} ${mondwest.variable} font-sans bg-stone-100 dark:bg-stone-900 relative`}
         >
           {children}
 

@@ -24,7 +24,7 @@ const TextBlock = ({
       </div>
     )}
 
-    <p className="">{copy}</p>
+    <p className="whitespace-pre-line">{copy}</p>
   </div>
 );
 

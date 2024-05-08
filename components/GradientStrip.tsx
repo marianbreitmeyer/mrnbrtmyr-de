@@ -1,5 +1,12 @@
-const GradientStrip = () => (
-  <div className="absolute left-0 top-0 w-full h-2 pointer-events-none z-10">
+import { cn } from '@/utils/cn';
+
+const GradientStrip = ({ isOnTop }: { isOnTop?: boolean }) => (
+  <div
+    className={cn(
+      'absolute left-0 w-full h-2 pointer-events-none z-10',
+      isOnTop ? '-top-2' : 'top-0'
+    )}
+  >
     <div className="wrapper-no-p grid grid-cols-8 w-full h-full">
       <div className="col-span-1 h-full bg-teal-800"></div>
       <div className="col-span-1 h-full bg-teal-700"></div>
