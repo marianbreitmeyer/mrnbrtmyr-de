@@ -38,7 +38,10 @@
     @apply bg-gradient-to-t from-stone-200/15 to-stone-200/0 dark:from-stone-800/15 dark:to-stone-800/0;
   }
   .wrapper {
-    @apply relative w-full max-w-5xl mx-auto py-16 md:py-20;
+    @apply relative w-full max-w-5xl mx-auto py-16 md:py-20 px-6 md:px-10;
+  }
+  .wrapper-no-p {
+    @apply relative w-full max-w-5xl mx-auto;
   }
   .h-padding {
     @apply px-20 md:px-24;
