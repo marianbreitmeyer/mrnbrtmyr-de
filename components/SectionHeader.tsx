@@ -3,11 +3,16 @@ import Corners from '@/components/Corners';
 const SectionHeader = ({
   title,
   subtitle,
+  id,
 }: {
   title: string;
   subtitle?: string;
+  id?: string;
 }) => (
-  <section className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700">
+  <section
+    className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700"
+    id={id}
+  >
     <div className="wrapper-no-p text-lg text-stone-400 border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-20 md:py-24 px-6 md:px-10">
       <h2 className="inline-block font-semibold">{title}</h2>
       {subtitle && <h3 className="inline-block">{`\u00A0 ${subtitle}`}</h3>}

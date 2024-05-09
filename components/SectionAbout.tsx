@@ -70,10 +70,7 @@ I have designed user interfaces and experiences, mapped out and implemented road
 
 const PartInterests = () => {
   return (
-    <section
-      className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
-      id="experience"
-    >
+    <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700">
       <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
         <div className="col-span-8 md:col-span-3 gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
           <h5 className="text-stone-400 dark:stone-text-600 ">

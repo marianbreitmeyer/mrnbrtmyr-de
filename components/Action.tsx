@@ -1,5 +1,3 @@
-'use client';
-
 import { cn } from '@/utils/cn';
 import Link, { LinkProps } from 'next/link';
 import Icon, { IconProps } from '@/components/Icon';

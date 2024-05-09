@@ -15,7 +15,7 @@ const SectionExperience = () => (
 export default SectionExperience;
 
 const PartLichtblick = () => (
-  <section className="w-full h-auto" id="experience">
+  <section className="w-full h-auto">
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader
@@ -83,10 +83,7 @@ const PartLichtblick = () => (
 );
 
 const PartMutabor = () => (
-  <section
-    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
-    id="experience"
-  >
+  <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700">
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader
@@ -112,10 +109,7 @@ const PartMutabor = () => (
 );
 
 const PartDeepblue = () => (
-  <section
-    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
-    id="experience"
-  >
+  <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700">
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader

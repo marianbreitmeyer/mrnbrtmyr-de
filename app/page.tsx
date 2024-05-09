@@ -14,11 +14,16 @@ export default function Home() {
         <SectionHeader
           title="Work Experience."
           subtitle="What I've done so far."
+          id="experience"
         />
         <SectionExperience />
-        <SectionHeader title="Education." subtitle="What I've learned." />
+        <SectionHeader
+          title="Education."
+          subtitle="What I've learned."
+          id="education"
+        />
         <SectionEducation />
-        <SectionHeader title="About me." />
+        <SectionHeader title="About me." id="about" />
         <SectionAbout />
       </main>
     </>
