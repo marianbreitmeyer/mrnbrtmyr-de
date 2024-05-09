@@ -17,7 +17,8 @@ export default function Home() {
           subtitle="What I've done so far."
         />
         <SectionExperience />
-        {/* <SectionEducation /> */}
+        <SectionHeader title="Education." subtitle="What I've learned." />
+        <SectionEducation />
         {/* <SectionContact /> */}
         {/* <SectionAbout /> */}
       </main>
