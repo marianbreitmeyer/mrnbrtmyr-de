@@ -32,7 +32,7 @@ I have designed user interfaces and experiences, mapped out and implemented road
         <TextBlock
           title={`I am currently seeking new opportunities, so if you believe we would be a good fit, please reach out!`}
         />
-        <div className="flex flex-row gap-x-3 md:gap-x-6">
+        <div className="flex flex-col md:flex-row gap-y-3 gap-x-3 md:gap-x-6">
           <Action
             as="external"
             href={'https://read.cv/marianbreitmeyer'}
@@ -41,7 +41,7 @@ I have designed user interfaces and experiences, mapped out and implemented road
             CV
           </Action>
           <CopyButton />
-          <div className="flex flex-row gap-x-10">
+          <div className="flex flex-row gap-x-6 md:gap-x-10 -mt-2 md:mt-0">
             <Action
               as="external"
               href={'https://www.linkedin.com/in/marian-breitmeyer-62001b262/'}
@@ -83,7 +83,7 @@ const PartInterests = () => {
         <div className="col-span-8 md:col-span-5 gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
           <ol className="list-disc text-sm text-stone-600 dark:text-stone-400">
             <li>
-              {`I’m really into watching "Making of" documentaries for any creative endeavor, like in`}{' '}
+              {`I’m really into watching "Making of" documentaries for any creative endeavor, like `}{' '}
               <Action
                 as="external"
                 href="https://www.https://arstechnica.com/video/series/war-stories.com"
