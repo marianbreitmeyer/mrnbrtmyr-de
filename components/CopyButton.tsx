@@ -65,7 +65,7 @@ const CopyButton = () => {
               forceMount
             >
               <motion.li
-                className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium flex gap-x-2 items-center"
+                className="bg-stone-800 ring-1 ring-stone-600 rounded py-2 px-4 text-stone-200 text-sm font-medium flex gap-x-2 items-center shadow-md"
                 initial={{ y: 24, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{
