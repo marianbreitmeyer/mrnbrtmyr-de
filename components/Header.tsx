@@ -4,15 +4,15 @@ import Navigation from '@/components/Navigation';
 
 const Header = () => {
   return (
-    <header className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-12 md:py-24 px-6 md:px-10 flex flex-col gap-y-6 md:flex-row md:items-center justify-between z-10">
+    <header className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-8 md:py-24 px-6 md:px-10 flex flex-col gap-y-6 md:flex-row md:items-center justify-between z-10">
       <div className="flex flex-row gap-x-3">
         <MyAvatar />
-        <div className="flex flex-col">
-          <h3 className="text-base text-stone-800 dark:text-stone-200 relative">
+        <div className="flex flex-col text-sm md:text-base">
+          <h3 className="text-stone-800 dark:text-stone-200 relative">
             Marian Breitmeyer
-            <StatusPill className="absolute top-0 -translate-y-2/4 right-16 translate-x-full" />
+            <StatusPill className="absolute top-1 md:top-0 -translate-y-2/4 right-16 translate-x-full" />
           </h3>
-          <p className="text-base text-stone-400 dark:text-stone-400 h-8">
+          <p className="text-stone-400 dark:text-stone-400">
             Product Designer <i>who codes</i>
           </p>
         </div>

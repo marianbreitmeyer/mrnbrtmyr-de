@@ -6,7 +6,7 @@ const MyAvatar = ({ className }: { className?: string }) => (
   <div className="flex flex-col">
     <Avatar.Root
       className={cn(
-        'bg-stone-950 inline-flex h-12 w-12 select-none items-center justify-center overflow-hidden rounded-full align-middle',
+        'bg-stone-950 inline-flex h-10 w-10 md:h-12 md:w-12 select-none items-center justify-center overflow-hidden rounded-full align-middle',
         className
       )}
     >
