@@ -28,7 +28,7 @@ const SectionEducation = () => (
         />
         <EducationEntry
           date="2010 – 2014"
-          title="BA Gestlatung, Bachelor of Arts"
+          title="BA Gestaltung, Bachelor of Arts"
           subtitle="HAWK Hildesheim"
         />
         <EducationEntry
