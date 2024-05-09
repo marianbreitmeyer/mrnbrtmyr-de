@@ -1,4 +1,3 @@
-import SectionContact from '@/components/SectionContact';
 import SectionEducation from '@/components/SectionEducation';
 import SectionExperience from '@/components/SectionExperience';
 import SectionIntro from '@/components/SectionIntro';
@@ -19,8 +18,8 @@ export default function Home() {
         <SectionExperience />
         <SectionHeader title="Education." subtitle="What I've learned." />
         <SectionEducation />
-        {/* <SectionContact /> */}
-        {/* <SectionAbout /> */}
+        <SectionHeader title="About me." />
+        <SectionAbout />
       </main>
     </>
   );
