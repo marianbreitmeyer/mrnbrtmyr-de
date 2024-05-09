@@ -9,7 +9,7 @@ const TextBlock = ({
   className?: string;
   title?: string;
   subtitle?: string;
-  copy: string;
+  copy?: string;
 }) => (
   <div
     className={cn(
@@ -24,7 +24,7 @@ const TextBlock = ({
       </div>
     )}
 
-    <p className="whitespace-pre-line">{copy}</p>
+   {copy && <p className="whitespace-pre-line">{copy}</p>}
   </div>
 );
 

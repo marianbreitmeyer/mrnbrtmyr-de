@@ -5,7 +5,7 @@ import Link, { LinkProps } from 'next/link';
 import Icon, { IconProps } from '@/components/Icon';
 
 type BaseProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   icon?: { variant: IconProps['variant'] };
 };

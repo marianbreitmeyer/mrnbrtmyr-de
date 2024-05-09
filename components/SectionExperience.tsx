@@ -63,12 +63,14 @@ const PartLichtblick = () => (
           />
           <ol className="list-disc text-sm text-stone-600 dark:text-stone-400">
             <li>Redesigning the power to heat section and funnel</li>
-            <li>Vision Building for the new B2B Customer Portal & ecosystem</li>
-            <li>
+            <li className="mt-2">
+              Vision Building for the new B2B Customer Portal & ecosystem
+            </li>
+            <li className="mt-2">
               Conducting Department-spanning discoveries to improve customer
               support
             </li>
-            <li>
+            <li className="mt-2">
               Laying the foundation for our energy as a service ecosystem
               including the “strom wallet”
             </li>

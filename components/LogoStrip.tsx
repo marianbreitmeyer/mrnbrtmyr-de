@@ -8,7 +8,7 @@ const LogoStrip: React.FC<LogoStripProps> = ({ variant }) => {
   switch (variant) {
     case 'mutabor':
       return (
-        <div className="grid grid-cols-6 gap-x-2 md:gap-x-4 w-full h-fit">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-x-2 md:gap-x-4 w-full h-fit">
           <Logo variant={'vda'} />
           <Logo variant={'vodafone'} />
           <Logo variant={'merck'} />
@@ -18,7 +18,7 @@ const LogoStrip: React.FC<LogoStripProps> = ({ variant }) => {
       );
     case 'deepblue':
       return (
-        <div className="grid grid-cols-6 gap-x-2 md:gap-x-4 w-full h-fit">
+        <div className="grid grid-cols-4 md:grid-cols-6 gap-x-2 md:gap-x-4 w-full h-fit">
           <Logo variant={'bosch'} />
           <Logo variant={'ernstings'} />
           <Logo variant={'migros'} />
