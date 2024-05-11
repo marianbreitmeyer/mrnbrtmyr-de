@@ -49,7 +49,7 @@ const AniButton = () => {
           >
             <motion.span
               key="copy"
-              variants={variantsText}
+              variants={variantsTextCheck}
               initial="hidden"
               animate="visible"
               exit="hidden"
@@ -75,7 +75,7 @@ const AniButton = () => {
           >
             <motion.span
               key="mail"
-              variants={variantsText}
+              variants={variantsTextCopy}
               initial="hidden"
               animate="visible"
               exit="hidden"
@@ -107,33 +107,44 @@ export default AniButton;
 const variantsIconCopy = {
   hidden: {
     opacity: 0,
-    transition: { type: 'spring', duration: 0.5, bounce: 0 },
+    transition: { type: 'spring', duration: 0.4, bounce: 0 },
   },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', duration: 0.5, bounce: 0 },
+    transition: { type: 'spring', duration: 0.25, bounce: 0 },
   },
 };
 const variantsIconCheck = {
   hidden: {
     opacity: 0,
     scale: 0.5,
-    transition: { type: 'spring', duration: 0.5, bounce: 0 },
+    transition: { type: 'spring', duration: 0.15, bounce: 0 },
   },
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', duration: 0.5, bounce: 0.75, delay: 0.15 },
+    transition: { type: 'spring', duration: 0.4, bounce: 0.75, delay: 0.15 },
   },
 };
-const variantsText = {
+const variantsTextCopy = {
   hidden: {
     opacity: 0,
-    transition: { type: 'spring', duration: 0.5, bounce: 0 },
+    transition: { type: 'spring', duration: 0.4, bounce: 0 },
   },
   visible: {
     opacity: 1,
-    transition: { type: 'spring', duration: 0.5, bounce: 0 },
+    transition: { type: 'spring', duration: 0.25, bounce: 0 },
+  },
+};
+
+const variantsTextCheck = {
+  hidden: {
+    opacity: 0,
+    transition: { type: 'spring', duration: 0.15, bounce: 0 },
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: 'spring', duration: 0.4, bounce: 0 },
   },
 };
