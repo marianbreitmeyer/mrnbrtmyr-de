@@ -4,6 +4,7 @@ import SectionIntro from '@/components/SectionIntro';
 import Header from '@/components/Header';
 import SectionAbout from '@/components/SectionAbout';
 import SectionHeader from '@/components/SectionHeader';
+import NewCarousel from '@/components/NewCarousel';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <SectionEducation />
         <SectionHeader title="About me." id="about" />
         <SectionAbout />
+        <NewCarousel />
       </main>
     </>
   );
