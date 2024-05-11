@@ -2,7 +2,7 @@ import TextBlock from '@/components/TextBlock';
 import Action from '@/components/Action';
 import Picture from '@/components/Picture';
 import StatusPill from '@/components/StatusPill';
-import CopyButton from '@/components/CopyButton';
+import AniButton from '@/components//AniButton';
 
 const SectionAbout = () => (
   <>
@@ -38,9 +38,9 @@ I have designed user interfaces and experiences, mapped out and implemented road
             href={'https://read.cv/marianbreitmeyer'}
             icon={{ variant: 'arrow-right-top' }}
           >
-            CV
+            read.cv
           </Action>
-          <CopyButton />
+          <AniButton />
           <div className="flex flex-row gap-x-6 md:gap-x-10 -mt-2 md:mt-0">
             <Action
               as="external"

@@ -1,5 +1,5 @@
 import Action from '@/components/Action';
-import CopyButton from '@/components/CopyButton';
+import AniButton from '@/components/AniButton';
 
 const SectionIntro = () => (
   <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700">
@@ -29,9 +29,9 @@ const SectionIntro = () => (
             href={'https://read.cv/marianbreitmeyer'}
             icon={{ variant: 'arrow-right-top' }}
           >
-            CV
+            read.cv
           </Action>
-          <CopyButton />
+          <AniButton />
         </div>
       </div>
     </div>
