@@ -90,7 +90,6 @@ const AniButton = () => {
               animate="visible"
               exit="hidden"
               onAnimationComplete={(definition) => {
-                console.log('Completed animating', definition);
                 if (definition === 'visible') setIsButtonDisabled(false);
               }}
             >
