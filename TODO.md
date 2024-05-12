@@ -1,15 +1,16 @@
 # To Do's
 
-- Edit: Milestone to right/left col & row components
-- Need: Another "Milestone" to fir the contact section -> Including Link
-- Need: another milestone combination for Education, since the subline is no date and shouldn't make use of mono font
-- Add: Animated scroll indicator on the left, teal strip from portfolio design
-- Edit: Colorful first entry in milestones
-- Add: Avatar like denismoulin
-- Add: radix modal for more details per experience entry – copy content from linkedIn
-- Add: Link/Trigger for Modal
-- Add: Contact Button - Main CTA
+- Add: Gradient to Carousel, like in SectionHeader
+- Add: Option to fill Carousel wiht child, create as many "slides" as childs
+- Fix Hoverstates: Create functional ones
+- Fix: Contact Strip - copy button layout shifts
+- Check icon imports, are all in Icon necessary there or could some be direct imports froms radix instead?
+- Add: Slider bg-stone-200 dark:bg-stone-600
 
-## Done
+- Add: Mini Paralax scroll in images
+- Fix: correct detextion of current set theme
+- Fix: Check colors in darkmode
+- Fix: useIntervall hook to handle out of focus tab -> Fix? bring back the subtitle animation?
 
-- Fix: useIntervall hook to handle out of focus tab
+- Add: Own About Site: About, Education, Contact, projects (matzes website)
+- Add: Skills "Table"?
