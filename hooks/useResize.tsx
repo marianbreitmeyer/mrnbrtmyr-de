@@ -1,9 +1,10 @@
-'use client';
 import { useEffect, useState } from 'react';
 
 const useResize = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
+  const isClient = typeof window === 'object'; // Check if window object is available
+
+  const [width, setWidth] = useState(isClient ? window.innerWidth : 0);
+  const [height, setHeight] = useState(isClient ? window.innerHeight : 0);
 
   const debounce = (func: () => void, delay: number) => {
     let timer: NodeJS.Timeout;
@@ -14,6 +15,8 @@ const useResize = () => {
   };
 
   useEffect(() => {
+    if (!isClient) return; // Exit early if running on the server
+
     const handleResize = debounce(() => {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
@@ -31,7 +34,7 @@ const useResize = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isClient]);
 
   return [width, height];
 };
