@@ -42,7 +42,7 @@ I have designed user interfaces and experiences, mapped out and implemented road
             read.cv
           </Action>
           <AniButton className="w-44" />
-          <div className="flex flex-row gap-x-6 md:gap-x-10 -mt-2 md:mt-0">
+          <div className="flex flex-row gap-x-6 md:gap-x-10 mt-2 md:mt-0">
             <Action
               as="external"
               href={'https://www.linkedin.com/in/marian-breitmeyer-62001b262/'}
