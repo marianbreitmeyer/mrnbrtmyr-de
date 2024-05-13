@@ -10,7 +10,7 @@ const SectionHeader = ({
   id?: string;
 }) => (
   <section
-    className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700"
+    className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700 overflow-x-hidden"
     id={id}
   >
     <div className="wrapper-no-p text-lg text-stone-400 border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 py-20 md:py-24 px-6 md:px-10">

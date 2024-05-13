@@ -16,7 +16,7 @@ export default SectionAbout;
 
 const PartAbout = () => (
   <section
-    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700"
+    className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700 overflow-x-hidden"
     id="experience"
   >
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">

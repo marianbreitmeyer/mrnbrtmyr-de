@@ -1,7 +1,7 @@
 import EducationEntry from './EducationEntry';
 
 const SectionEducation = () => (
-  <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700">
+  <section className="w-full h-auto border-t-[1px] border-stone-200 dark:border-stone-700 overflow-x-hidden">
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-4 gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
         <EducationEntry
