@@ -129,26 +129,6 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
       {/* <div className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700"> */}
       {/* <div className="overflow-hidden wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8 py-12 md:py-24"> */}
       <div className="relative col-span-8 col-start-1 md:col-span-5 md:col-start-4 pb-6 md:pb-10">
-        <div className="flex gap-x-0.5 md:gap-x-1 px-6 md:px-10 py-1 md:py-3">
-          <button
-            type="button"
-            className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
-            onClick={scrollPrev}
-            disabled={!canScrollPrev}
-          >
-            <ChevronLeftIcon />
-            <span className="sr-only">Previous Guide</span>
-          </button>
-          <button
-            type="button"
-            className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
-            onClick={scrollNext}
-            disabled={!canScrollNext}
-          >
-            <ChevronRightIcon />
-            <span className="sr-only">Next Guide</span>
-          </button>
-        </div>
         <motion.ul
           className="flex items-center"
           style={{
@@ -187,6 +167,29 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
             );
           })}
         </motion.ul>
+        <div className="flex justify-between items-center px-6 md:px-10 py-1 md:py-3">
+          <div className="flex gap-x-0.5 md:gap-x-1 items-center">
+            <button
+              type="button"
+              className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
+              onClick={scrollPrev}
+              disabled={!canScrollPrev}
+            >
+              <ChevronLeftIcon />
+              <span className="sr-only">Previous Guide</span>
+            </button>
+            <button
+              type="button"
+              className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
+              onClick={scrollNext}
+              disabled={!canScrollNext}
+            >
+              <ChevronRightIcon />
+              <span className="sr-only">Next Guide</span>
+            </button>
+          </div>
+          <p className="text-xs text-stone-400">{`${activeSlide + 1} / ${children.length}`}</p>
+        </div>
       </div>
       {/* </div> */}
       {/* </div> */}
