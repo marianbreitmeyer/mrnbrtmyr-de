@@ -1,13 +1,21 @@
+import { cn } from '@/utils/cn';
 import Image from 'next/image';
 
 const Picture = ({
   imageSrc,
   altText,
+  className,
 }: {
   imageSrc: string;
   altText: string;
+  className?: string;
 }) => (
-  <div className="w-full aspect-video relative rounded-lg overflow-hidden -z-10">
+  <div
+    className={cn(
+      'w-full aspect-video relative rounded-lg overflow-hidden -z-10',
+      className
+    )}
+  >
     <Image
       fill
       src={imageSrc}

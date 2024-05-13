@@ -3,6 +3,7 @@ import JobHeader from '@/components/JobHeader';
 import RoleHeader from '@/components/RoleHeader';
 import LogoStrip from '@/components/LogoStrip';
 import Picture from '@/components/Picture';
+import Carousel from '@/components/Carousel';
 
 const SectionExperience = () => (
   <>
@@ -102,8 +103,34 @@ const PartMutabor = () => (
           Being one of the first designers in the new digital unit, I immersed myself in a variety of projects, actively contributing to the team's expansion. I leveraged a diverse skill set, spanning from UX/UI design to website programming and crafting custom tools like Sketch & Figma plugins. Working across diverse sectors including HealthTech, Sports, and Automotive, I collaborated with esteemed clients such as DFL, HealthAG, Migros, BayWa, Merck, VDA, and ADC. These projects varied from initial MVP developments to continuous platform enhancement and the creation of tailored standalone solutions, offering me a rapid accumulation of valuable experience.`}
         />
         <LogoStrip variant="mutabor" />
-        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
+      <Carousel>
+        <Picture
+          imageSrc="/mutabor/vodafone.png"
+          altText="Vodafone App Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/mutabor/adc.png"
+          altText="ADC App & Website Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/mutabor/migros-insieme.png"
+          altText="Migros Insieme Webplatform Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/mutabor/merck.png"
+          altText="Merck Asset Generator Webapp Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/mutabor/health-ag.png"
+          altText="Health AG Webapp Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+      </Carousel>
     </div>
   </section>
 );

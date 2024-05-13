@@ -36,7 +36,7 @@ const articles = [
   },
 ];
 
-export default function NewCarousel() {
+const Carousel = ({ children }: { children: React.ReactNode[] }) => {
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
   const [activeSlide, setActiveSlide] = useState(START_INDEX);
   const [itemWidth, setItemWidth] = useState(FALLBACK_WIDTH);
@@ -152,86 +152,72 @@ export default function NewCarousel() {
 
   return (
     <>
-      <div className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700">
-        <div className="overflow-hidden wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8 py-12 md:py-24">
-          <div className="relative col-span-8 col-start-1 md:col-span-5 md:col-start-4">
-            <motion.ul
-              className="flex items-center"
-              style={{
-                x: animatedX,
-              }}
-              drag="x"
-              dragConstraints={{
-                left: -(itemWidth * (articles.length - 1)),
-                right: itemWidth,
-              }}
-              onDragEnd={handleDragSnap}
-            >
-              {articles.map((article, index) => {
-                const active = index === activeSlide;
-                return (
-                  <motion.li
-                    layout
-                    key={index}
-                    ref={(el) => {
-                      if (el) itemsRef.current[index] = el;
-                    }}
-                    className={cn(
-                      'group relative shrink-0 select-none px-6 md:px-10 basis-full',
-                      !active && 'opacity-20'
-                    )}
-                    transition={{
-                      type: 'spring',
-                      bounce: 0.1,
-                      duration: 0.7,
-                    }}
-                    // style={{
-                    //   flexBasis: active ? '100%' : '80%',
-                    // }}
-                  >
-                    <div className="block" draggable={false}>
-                      <Picture imageSrc="/mb.jpg" altText="just text" />
-                      {/* <div
-                        className={cn(
-                          'grid place-content-center overflow-hidden rounded-lg bg-gray-900',
-                          active ? 'aspect-[4/3]' : 'aspect-[4/3]'
-                        )}
-                      >
-                        <span
-                          className={cn(
-                            'text-xl font-bold',
-                            active && 'text-lime-300'
-                          )}
-                        >
-                          {index}
-                        </span>
-                      </div> */}
-                    </div>
-                  </motion.li>
-                );
-              })}
-            </motion.ul>
-            <button
-              type="button"
-              className="bg-stone-200 disabled:opacity-50 rounded-lg group absolute left-0 top-1/2 -translate-y-10 z-20 p-3"
-              onClick={scrollPrev}
-              disabled={!canScrollPrev}
-            >
-              <ChevronLeftIcon />
-              <span className="sr-only">Previous Guide</span>
-            </button>
-            <button
-              type="button"
-              className="bg-stone-200 rounded-lg disabled:opacity-50 group absolute left-0 top-1/2 translate-y-10 z-20 text-stone-600 p-3"
-              onClick={scrollNext}
-              disabled={!canScrollNext}
-            >
-              <ChevronRightIcon />
-              <span className="sr-only">Next Guide</span>
-            </button>
-          </div>
+      {/* <div className="w-full h-auto border-t-[1px] border-b-[1px] border-stone-200 dark:border-stone-700"> */}
+      {/* <div className="overflow-hidden wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8 py-12 md:py-24"> */}
+      <div className="relative col-span-8 col-start-1 md:col-span-5 md:col-start-4 pb-6 md:pb-10">
+        <div className="flex gap-x-0.5 md:gap-x-1 px-6 md:px-10 py-1 md:py-3">
+          <button
+            type="button"
+            className="disabled:opacity-40 rounded-lg group p-4 hover:bg-stone-200 disabled:hover:bg-transparent"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+          >
+            <ChevronLeftIcon />
+            <span className="sr-only">Previous Guide</span>
+          </button>
+          <button
+            type="button"
+            className="rounded-lg disabled:opacity-40 text-stone-600 p-4 hover:bg-stone-200 disabled:hover:bg-transparent"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+          >
+            <ChevronRightIcon />
+            <span className="sr-only">Next Guide</span>
+          </button>
         </div>
+        <motion.ul
+          className="flex items-center"
+          style={{
+            x: animatedX,
+          }}
+          drag="x"
+          dragConstraints={{
+            left: -(itemWidth * (articles.length - 1)),
+            right: itemWidth,
+          }}
+          onDragEnd={handleDragSnap}
+        >
+          {children.map((child, index) => {
+            const active = index === activeSlide;
+            return (
+              <motion.li
+                layout
+                key={index}
+                ref={(el) => {
+                  if (el) itemsRef.current[index] = el;
+                }}
+                className={cn(
+                  'group relative shrink-0 select-none px-6 md:px-10 basis-full',
+                  !active && 'opacity-20'
+                )}
+                transition={{
+                  type: 'spring',
+                  bounce: 0.1,
+                  duration: 0.7,
+                }}
+              >
+                <div className="block" draggable={false}>
+                  {child}
+                </div>
+              </motion.li>
+            );
+          })}
+        </motion.ul>
       </div>
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
-}
+};
+
+export default Carousel;
