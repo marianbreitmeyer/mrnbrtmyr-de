@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, type PanInfo } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon } from '@radix-ui/react-icons';
-import Picture from '@/components/Picture';
 import { cn } from '@/utils/cn';
 import useResize from '@/hooks/useResize';
 
@@ -11,38 +10,13 @@ const START_INDEX = 0;
 const DRAG_THRESHOLD = 150;
 const FALLBACK_WIDTH = 509;
 
-const articles = [
-  {
-    title:
-      'Building a fully customisable carousel slider with swipe gestures and navigation using Framer Motion',
-    url: 'https://medium.com/@jeyprox/building-a-fully-customisable-carousel-slider-with-swipe-gestures-navigation-and-custom-cursor-4e986ccbd08f',
-  },
-  {
-    title:
-      'Building a customisable Input component with NextJS, ReactHookForm, TailwindCSS and TypeScript',
-    url: 'https://medium.com/@jeyprox/building-a-fully-customisable-input-component-with-nextjs-reacthookfrom-tailwindcss-and-ts-58874a2e3450',
-  },
-  {
-    title: 'Handling Forms in NextJS with busboy, ReactHookForm and TypeScript',
-    url: 'https://medium.com/@jeyprox/handling-forms-in-nextjs-with-busboy-reacthookform-and-ts-3f86c70545b3',
-  },
-  {
-    title: 'Handling Forms in NextJS with busboy, ReactHookForm and TypeScript',
-    url: 'https://medium.com/@jeyprox/handling-forms-in-nextjs-with-busboy-reacthookform-and-ts-3f86c70545b3',
-  },
-  {
-    title: 'Handling Forms in NextJS with busboy, ReactHookForm and TypeScript',
-    url: 'https://medium.com/@jeyprox/handling-forms-in-nextjs-with-busboy-reacthookform-and-ts-3f86c70545b3',
-  },
-];
-
 const Carousel = ({ children }: { children: React.ReactNode[] }) => {
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
   const [activeSlide, setActiveSlide] = useState(START_INDEX);
   const [itemWidth, setItemWidth] = useState(FALLBACK_WIDTH);
   const [width] = useResize();
   const canScrollPrev = activeSlide > 0;
-  const canScrollNext = activeSlide < articles.length - 1;
+  const canScrollNext = activeSlide < children.length - 1;
   const offsetX = useMotionValue(0);
   const animatedX = useSpring(offsetX, {
     damping: 20,
@@ -158,7 +132,7 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
         <div className="flex gap-x-0.5 md:gap-x-1 px-6 md:px-10 py-1 md:py-3">
           <button
             type="button"
-            className="disabled:opacity-40 rounded-lg group p-4 hover:bg-stone-200 disabled:hover:bg-transparent"
+            className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
             onClick={scrollPrev}
             disabled={!canScrollPrev}
           >
@@ -167,7 +141,7 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
           </button>
           <button
             type="button"
-            className="rounded-lg disabled:opacity-40 text-stone-600 p-4 hover:bg-stone-200 disabled:hover:bg-transparent"
+            className="rounded-lg disabled:opacity-40 text-stone-600 dark:text-stone-200 p-4 hover:bg-stone-200 dark:hover:bg-stone-800 disabled:hover:bg-transparent dark:disabled:hover:bg-transparent"
             onClick={scrollNext}
             disabled={!canScrollNext}
           >
@@ -182,7 +156,7 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
           }}
           drag="x"
           dragConstraints={{
-            left: -(itemWidth * (articles.length - 1)),
+            left: -(itemWidth * (children.length - 1)),
             right: itemWidth,
           }}
           onDragEnd={handleDragSnap}

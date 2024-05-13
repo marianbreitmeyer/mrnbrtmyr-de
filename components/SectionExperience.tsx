@@ -48,7 +48,11 @@ const PartLichtblick = () => (
           }
           copy={`I worked on establishing a culture of design excellence and cross-functional collaboration within the organization. This included influencing the organizational structure to facilitate collaboration across product teams. Introducing rituals, meetings, and fostering a community of practice for digital product design. Also Advocacy for human-centered design was a key aspect of my role, which involved promoting User Research & Testing in collaboration with the Customer Insights Team.`}
         />
-        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
+        <Picture
+          altText="placeholder image"
+          imageSrc="/lichtblick/ops.png"
+          className="bg-stone-200 dark:bg-stone-700"
+        />
 
         <TextBlock
           title={'Laid the foundation for design'}
@@ -77,8 +81,29 @@ const PartLichtblick = () => (
             </li>
           </ol>
         </div>
-        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
+      <Carousel>
+        <Picture
+          imageSrc="/lichtblick/p2h.png"
+          altText="Power to Heat Website Funnel Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
+        />
+        <Picture
+          imageSrc="/lichtblick/b2b.png"
+          altText="B2B Customerportal MVP Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
+        />
+        <Picture
+          imageSrc="/lichtblick/solar.png"
+          altText="Solar Funnel MVP Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
+        />
+        <Picture
+          imageSrc="/lichtblick/faq.png"
+          altText="FAQ Section Web Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
+        />
+      </Carousel>
     </div>
   </section>
 );
@@ -108,27 +133,27 @@ const PartMutabor = () => (
         <Picture
           imageSrc="/mutabor/vodafone.png"
           altText="Vodafone App Design"
-          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
         />
         <Picture
           imageSrc="/mutabor/adc.png"
           altText="ADC App & Website Design"
-          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
         />
         <Picture
           imageSrc="/mutabor/migros-insieme.png"
           altText="Migros Insieme Webplatform Design"
-          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
         />
         <Picture
           imageSrc="/mutabor/merck.png"
           altText="Merck Asset Generator Webapp Design"
-          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
         />
         <Picture
           imageSrc="/mutabor/health-ag.png"
           altText="Health AG Webapp Design"
-          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+          className="rounded-lg bg-stone-200 dark:bg-stone-700"
         />
       </Carousel>
     </div>
@@ -162,8 +187,24 @@ const PartDeepblue = () => (
           Throughout my time at deepblue, my main focus was on enhancing my skills in User Experience Design and broadening my knowledge in this domain. This pursuit led me to progress to Senior and Lead roles, where I managed native app projects for clients such as Migros, Ernsting's Family, Bosch, and ADC within integrated cross-functional product teams, overseeing feature development and maintenance tasks.`}
         />
         <LogoStrip variant="deepblue" />
-        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
       </div>
+      <Carousel>
+        <Picture
+          imageSrc="/dbn/ernstings-family.png"
+          altText="Ernsting's family App Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/dbn/bosch.png"
+          altText="Bosch Data Logger and App Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+        <Picture
+          imageSrc="/dbn/migros-app.png"
+          altText="Migros App Design"
+          className="rounded-lg bg-stone-200 dark:bg-stone-600"
+        />
+      </Carousel>
     </div>
   </section>
 );
