@@ -4,6 +4,7 @@ import RoleHeader from '@/components/RoleHeader';
 import LogoStrip from '@/components/LogoStrip';
 import Picture from '@/components/Picture';
 import Carousel from '@/components/Carousel';
+import LoopVideo from '@/components/LoopVideo';
 
 const SectionExperience = () => (
   <>
@@ -58,7 +59,7 @@ const PartLichtblick = () => (
           title={'Laid the foundation for design'}
           copy={`In terms of foundational design framework, I developed guiding principles in partnership with the Product and Agile teams. Playbooks and rules were defined to streamline design processes, and a cohesive toolset, including custom Figma plugins by me, was implemented to support our design system. I also contributed to enhancing the LichtBlick Photon Design System for consistency and scalability.`}
         />
-        <Picture altText="placeholder image" imageSrc="/placeholder.jpg" />
+        <LoopVideo vidSrc="/lichtblick/photon-themer-preview.mp4" />
 
         <div className="flex flex-col gap-y-4 md:gap-y-6">
           <TextBlock
