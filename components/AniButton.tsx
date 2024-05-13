@@ -2,8 +2,9 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/Icon';
+import { cn } from '@/utils/cn';
 
-const AniButton = () => {
+const AniButton = ({ className }: { className?: string }) => {
   let [copied, setCopied] = useState(false);
   let [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
@@ -38,7 +39,7 @@ const AniButton = () => {
     <button
       aria-label="Copy E-Mail adress"
       onClick={() => copyToClipboard({ textToCopy: 'hi@marianbreitmeyer.de' })}
-      className="text-sm text-stone-600 dark:text-stone-400"
+      className={cn('text-sm text-stone-600 dark:text-stone-400', className)}
       disabled={isButtonDisabled}
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -124,7 +125,7 @@ const variantsIconCheck = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { type: 'spring', duration: 0.4, bounce: 0.75, delay: 0.15 },
+    transition: { type: 'spring', duration: 0.4, bounce: 0.5, delay: 0.15 },
   },
 };
 const variantsTextCopy = {
