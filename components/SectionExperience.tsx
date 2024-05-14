@@ -17,7 +17,7 @@ const SectionExperience = () => (
 export default SectionExperience;
 
 const PartLichtblick = () => (
-  <section className="w-full h-auto overflow-x-hidden">
+  <section className="w-full h-auto overflow-x-hidden md:gradient-mask-l-[transparent,rgba(0,0,0,1.0)_20%,rgba(0,0,0,1.0)_92.5%,transparent_100%]">
     <div className="wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8">
       <div className="col-span-8 md:col-span-3 sticky top-0 md:block p-6 md:p-10 min-h-full bg-stone-100 dark:bg-stone-900 md:bg-transparent md:dark:bg-transparent">
         <JobHeader
