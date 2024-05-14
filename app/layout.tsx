@@ -27,6 +27,15 @@ const mondwest = localFont({
 export const metadata: Metadata = {
   title: 'Marian Breitmeyer',
   description: 'Digital Product Designer',
+  openGraph: {
+    images: [
+      {
+        url: '/share/marian-breitmeyer.jpg',
+        width: 1200,
+        height: 627,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
