@@ -130,7 +130,7 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
       {/* <div className="overflow-hidden wrapper-no-p border-l-[1px] border-r-[1px] border-stone-200 dark:border-stone-700 grid grid-cols-8 py-12 md:py-24"> */}
       <div className="relative col-span-8 col-start-1 md:col-span-5 md:col-start-4 pb-6 md:pb-10">
         <motion.ul
-          className="flex items-center"
+          className="flex items-center group cursor-pointer"
           style={{
             x: animatedX,
           }}
@@ -151,7 +151,7 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
                   if (el) itemsRef.current[index] = el;
                 }}
                 className={cn(
-                  'group relative shrink-0 select-none px-6 md:px-10 basis-full',
+                  'relative shrink-0 select-none px-6 md:px-10 basis-full',
                   !active && 'opacity-20'
                 )}
                 transition={{
@@ -160,7 +160,10 @@ const Carousel = ({ children }: { children: React.ReactNode[] }) => {
                   duration: 0.7,
                 }}
               >
-                <div className="block" draggable={false}>
+                <div
+                  className="block group-hover:scale-[97.5%] transition ease-out duration-200 pointer-events-none"
+                  draggable={false}
+                >
                   {child}
                 </div>
               </motion.li>

@@ -1,6 +1,5 @@
 # To Do's
 
-- Add: Gradient to Carousel, like in SectionHeader
 - Add: more inline links: wizard skating, design execution gap, ...
 - ReWork interest? Input from iA Writer Doc.
 - Fix Hoverstates: Create functional ones
