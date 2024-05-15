@@ -26,12 +26,12 @@ const PartAbout = () => (
       <div className="col-span-8 md:col-span-5 gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
         <TextBlock
           copy={`I’ve been crafting human-centered software, mobile apps and web experiences for over a decade. I am dedicated to simplifying complexity and designing intuitive systems. 
-          Although I consider myself a designer, I have found code to be the best tool for translating my ideas into reality. I excel on bridging the gap between design and development, ensuring the creation of delightful and ethical solutions to provide value to both users and businesses.
+          I consider myself a designer, but I've found code to be the best tool for translating my ideas into reality. Therefore I excel at bridging the gap between design and development, ensuring the creation of delightful and ethical solutions to provide value to both users and businesses.
 
-I have designed user interfaces and experiences, mapped out and implemented roadmaps and features, led cross-functional teams, mentored other designers, and fostered the growth of design teams. All within agency and internal corporate environments.`}
+I've designed user interfaces and experiences, mapped out and implemented roadmaps and features, led cross-functional teams, mentored other designers, and fostered the growth of design teams. All within agency and internal corporate environments.`}
         />
         <TextBlock
-          title={`I am currently seeking new opportunities, so if you believe we would be a good fit, please reach out!`}
+          title={`Currently seeking new opportunities, so if you believe we would be a good fit, please reach out!`}
         />
         <div className="flex flex-col md:flex-row gap-y-3 gap-x-3 md:gap-x-6">
           <Action
@@ -112,7 +112,7 @@ const PartNow = () => (
       </div>
       <div className="col-span-8 md:col-span-5 gap-y-6 md:gap-y-10 flex flex-col p-6 md:p-10">
         <TextBlock
-          copy={`I am focused on expanding my knowledge of web development to build my ideas independently. Narrowing the design execution gap to become more of a builder. 
+          copy={`At the moment, I am focused on expanding my knowledge of web development to build my ideas independently. Narrowing the design execution gap to become more of a builder. 
             Tinkering around with software to solve my own problems is really satisfying, although sometimes frustrating ;)`}
         />
       </div>

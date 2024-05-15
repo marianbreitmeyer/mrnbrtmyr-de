@@ -10,11 +10,9 @@ const SectionIntro = () => (
           to simplifying complexity and designing intuitive systems.
         </h1>
         <h2 className="text-base md:text-lg text-stone-600 dark:text-stone-400 leading-normal">
-          Although I consider myself a designer, I have found code to be the
-          best tool for translating my ideas into reality. I excel at bridging
-          the gap between design and development, ensuring the creation of
-          delightful and ethical solutions to provide value to both users and
-          businesses.
+          {`I consider myself a designer, but I've found code to be the best tool for translating my ideas into reality. Therefore I excel at bridging the gap
+          between design and development, ensuring the creation of delightful
+          and ethical solutions to provide value to both users and businesses.`}
         </h2>
         <div className="flex flex-row gap-x-3 md:gap-x-6">
           <Action
