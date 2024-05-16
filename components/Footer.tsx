@@ -1,5 +1,5 @@
 import ThemeSwitch from '@/components/ThemeSwitch';
-import Link from 'next/link';
+// import Link from 'next/link';
 import GradientStrip from './GradientStrip';
 
 const Footer = () => (
@@ -9,7 +9,7 @@ const Footer = () => (
         As a father of three – Tiredness is a lifestyle feature.
       </p>
       <div className="flex flex-row items-center gap-x-6 md:gap-x-10 text-stone-600 dark:text-stone-600">
-        <Link href="/imprint">Imprint</Link>
+        {/* <Link href="/imprint">Imprint</Link> */}
         <p>{`© 2024`}</p>
         <ThemeSwitch />
       </div>
