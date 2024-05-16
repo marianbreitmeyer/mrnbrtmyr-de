@@ -91,7 +91,7 @@ const PartInterests = () => {
               >
                 Ars Technica War Stories
               </Action>
-              {`The whole idea of constraints sparking creativity always keeps me hooked`}
+              {`– The whole idea of constraints sparking creativity always keeps me hooked`}
             </li>
             <li className="mt-2">{`Exploring new things around the theme of motion is my jam. I've started learning some wizard skating moves and gravel-bike my way around hamburg`}</li>
             <li className="mt-2">{`Fascinated by systems of any kind, and being a dad, I love building awesome Lego worlds with my kids`}</li>
