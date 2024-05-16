@@ -89,7 +89,7 @@ const PartInterests = () => {
                 icon={{ variant: 'arrow-right-top' }}
                 className="text-stone-600 dark:stone-text-400 w-fit border-b-[1px] border-stone-600 dark:border-stone-400"
               >
-                Ars Technica War Stories.
+                Ars Technica War Stories
               </Action>
               {`The whole idea of constraints sparking creativity always keeps me hooked`}
             </li>
