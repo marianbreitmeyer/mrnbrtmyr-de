@@ -22,7 +22,7 @@ const LogoStrip: React.FC<LogoStripProps> = ({ variant }) => {
           <Logo variant={'bosch'} />
           <Logo variant={'ernstings'} />
           <Logo variant={'migros'} />
-          <Logo variant={'adc'} />
+          {/* <Logo variant={'adc'} /> */}
         </div>
       );
     default:
