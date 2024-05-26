@@ -124,7 +124,7 @@ const PartMutabor = () => (
           role={'Senior Art Director Digital / Digital Product Designer'}
         />
         <TextBlock
-          copy={`Mutabor is Germany's largest independent 360° design agency and brand consultancy, specializing in developing strategies to achieve a brand's target image. They provide services in design, technology, content, and brand development, supporting brands and companies in reaching the next level.
+          copy={`Mutabor is Germany's largest independent design agency and brand consultancy, specializing in developing strategies to achieve a brand's target image. They provide services in design, technology, content, and brand development.
 
           Being one of the first designers in the new digital unit, I immersed myself in a variety of projects, actively contributing to the team's expansion. I leveraged a diverse skill set, spanning from UX/UI design to website programming and crafting custom tools like Sketch & Figma plugins. Working across diverse sectors including HealthTech, Sports, and Automotive, I collaborated with esteemed clients such as DFL, HealthAG, Migros, BayWa, Merck, VDA, and ADC. These projects varied from initial MVP developments to continuous platform enhancement and the creation of tailored standalone solutions, offering me a rapid accumulation of valuable experience.`}
         />
