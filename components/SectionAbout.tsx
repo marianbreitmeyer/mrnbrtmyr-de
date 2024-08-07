@@ -85,7 +85,7 @@ const PartInterests = () => {
               {`I’m really into watching "Making of" documentaries for any creative endeavor, like `}{' '}
               <Action
                 as="external"
-                href="https://www.https://arstechnica.com/video/series/war-stories.com"
+                href="https://arstechnica.com/video/series/war-stories.com"
                 icon={{ variant: 'arrow-right-top' }}
                 className="text-stone-600 dark:stone-text-400 w-fit border-b-[1px] border-stone-600 dark:border-stone-400"
               >
