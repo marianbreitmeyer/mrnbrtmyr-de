@@ -1,5 +1,5 @@
 import MyAvatar from '@/components/MyAvatar';
-import StatusPill from '@/components/StatusPill';
+// import StatusPill from '@/components/StatusPill';
 import Navigation from '@/components/Navigation';
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
         <div className="flex flex-col text-sm md:text-base">
           <h3 className="text-stone-800 dark:text-stone-200 relative">
             Marian Breitmeyer
-            <StatusPill className="absolute top-1 md:top-0 -translate-y-2/4 right-16 translate-x-full" />
+            {/* <StatusPill className="absolute top-1 md:top-0 -translate-y-2/4 right-16 translate-x-full" /> */}
           </h3>
           <p className="text-stone-400 dark:text-stone-400">
             Product Designer <i>who codes</i>
