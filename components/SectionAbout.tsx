@@ -1,6 +1,5 @@
 import TextBlock from '@/components/TextBlock';
 import Action from '@/components/Action';
-import Picture from '@/components/Picture';
 // import StatusPill from '@/components/StatusPill';
 import AniButton from '@/components//AniButton';
 
@@ -60,10 +59,6 @@ I've designed user interfaces and experiences, mapped out and implemented roadma
               icon={{ variant: 'github' }}
             />
           </div>
-        </div>
-        <div className="relative">
-          <Picture altText="Portrait of Marian" imageSrc="/mb.jpg" />
-          {/* <StatusPill className="absolute right-4 top-4" /> */}
         </div>
       </div>
     </div>
